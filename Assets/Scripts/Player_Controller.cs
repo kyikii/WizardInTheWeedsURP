@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class Player_Controller : MonoBehaviour
 {
-    [SerializeField] Transform playerCam;
+    [SerializeField] Transform playerCam, PlayerGround;
     CharacterController controller; 
     [SerializeField] float mouseSensitivity = 3.5f;
     [SerializeField] float walkSpeed = 3.5f;
     [SerializeField] float gravity = -13.0f;
-    float velocityY;
+    float velocityY, GroundDist = 0.4f;
     [SerializeField] bool lockCursor = true;
     [SerializeField][Range(0.0f,0.5f)] float SmoothMove = 0.3f;
     [SerializeField][Range(0.0f,0.5f)] float SmoothMouse = 0.03f;
-    Vector2 currentDir;
+    [SerializeField][Range(0.0f,0.5f)] float JumpHeight = 2f;
     public Vector2 currentDirVelocity;
-    Vector2 currentMouseDelta;
-    Vector2 currentMouseDeltaVelocity;
+    private Vector2 currentMouseDelta, currentMouseDeltaVelocity, currentDir;
     public bool CamLock;
+    bool Grounded;
+
+    public LayerMask GroundMask;
 
     float cameraPitch = 0f;
 
@@ -38,6 +40,7 @@ public class Player_Controller : MonoBehaviour
         if(!CamLock)
         {
             UpdateMouseMovement();
+            CheckJump();
             UpdateKeyboardMovement();
         } 
     }
@@ -69,5 +72,22 @@ public class Player_Controller : MonoBehaviour
 
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x)* walkSpeed + Vector3.up * velocityY;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    
+    void CheckJump()
+    {
+        Grounded = Physics.CheckSphere(PlayerGround.position,GroundDist,GroundMask);
+
+        if(Grounded && velocityY <0)
+        {
+            velocityY = -2f;
+        }
+
+        if(Input.GetButtonDown("Jump")&& Grounded)
+        {
+            velocityY +=Mathf.Sqrt(JumpHeight * -2f * gravity);
+            Debug.Log("Jumped");
+        }
     }
 }
