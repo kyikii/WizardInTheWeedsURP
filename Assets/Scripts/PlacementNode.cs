@@ -36,16 +36,51 @@ public class PlacementNode : MonoBehaviour
         //Glyphs = GameObject.Find("GlyphHolder");
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(lerp)
         {
           LerpObjTo();  
         }
-
-        updateDistanceCheck();
+        
+        StartCoroutine(distancecheck());
+        //StopCoroutine(distancecheck());
+        //updateDistanceCheck();
     }
 
+    IEnumerator distancecheck()
+    {
+        float PlayerDist;
+        PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
+        //Debug.Log(PlayerDist);
+        if(PlayerDist < 3.0f)
+        {
+            disabled = false;
+            yield return new WaitForSecondsRealtime(1);
+        }
+        else
+        {
+            disabled = true;
+            GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
+            switch(occupied)
+            {
+                case true:
+                UnhighlightObj(OccupiedObj);
+                yield return new WaitForSecondsRealtime(1);
+                break;
+
+                case false:
+                if(Manager.GetComponent<PlayerManager>().heldObject != null)
+                {
+                    UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                }
+                yield return new WaitForSecondsRealtime(1);
+                break;
+            }
+        }
+        StopCoroutine(distancecheck());
+        //yield return new WaitForSecondsRealtime(1);
+    }
 
     private void OnMouseOver()
     { 
@@ -186,15 +221,13 @@ public class PlacementNode : MonoBehaviour
 
     }
 
-    public void updateDistanceCheck()
+    /*public void updateDistanceCheck()
     {
         float PlayerDist;
         PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
         //Debug.Log(PlayerDist);
         if(PlayerDist < 3.0f)
         {
-            //GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
-            //GetComponent<Renderer>().enabled = true;
             disabled = false;
         }
         else
@@ -210,9 +243,8 @@ public class PlacementNode : MonoBehaviour
                 UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
             }
-            //GetComponent<Renderer>().enabled = false;
         }
-    }
+    }*/
 
     void SetLerpData(Vector3 startpoint, Vector3 endpoint)
     {
@@ -240,8 +272,12 @@ public class PlacementNode : MonoBehaviour
             {
                 PutDownSeq();
                 swap = false;
+                EndLerpCheck();
             }
-            EndLerpCheck();            
+            else
+            {
+                EndLerpCheck();
+            }            
         }
     }
 
@@ -260,6 +296,7 @@ public class PlacementNode : MonoBehaviour
         if(!swap)
         {
             Manager.GetComponent<PlayerManager>().holding = true;
+            //Manager.GetComponent<PlayerManager>().heldObject = OccupiedObj;
         }
 
         Manager.GetComponent<PlayerManager>().heldObject = OccupiedObj;

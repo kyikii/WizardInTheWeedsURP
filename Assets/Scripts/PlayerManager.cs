@@ -16,8 +16,8 @@ public class PlayerManager : MonoBehaviour
         holding = false;
     }
 
-    public void updateDistanace()  
+    /*public void updateDistanace()  
     {
         BroadcastMessage("updateDistanceCheck");
-    }
+    }*/
 }
