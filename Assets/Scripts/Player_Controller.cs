@@ -13,7 +13,7 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] bool lockCursor = true;
     [SerializeField][Range(0.0f,0.5f)] float SmoothMove = 0.3f;
     [SerializeField][Range(0.0f,0.5f)] float SmoothMouse = 0.03f;
-    [SerializeField][Range(0.0f,0.5f)] float JumpHeight = 2f;
+    [SerializeField]float JumpHeight = 2f;
     public Vector2 currentDirVelocity;
     private Vector2 currentMouseDelta, currentMouseDeltaVelocity, currentDir;
     public bool CamLock;
