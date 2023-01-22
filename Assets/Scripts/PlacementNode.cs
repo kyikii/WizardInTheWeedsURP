@@ -14,7 +14,7 @@ public class PlacementNode : MonoBehaviour
     //bool hovering = false;
     public bool occupied, disabled = true;
     //int spriteIndex = 0;
-    private float speed = 6.0f;
+    private float speed = 6.0f, CheckInerval = 0f;
     [SerializeField] float minSpeed;
     
     private float journeyLength = 0, distCovered = 0, startTime;
@@ -43,20 +43,29 @@ public class PlacementNode : MonoBehaviour
           LerpObjTo();  
         }
         
-        StartCoroutine(distancecheck());
-        //StopCoroutine(distancecheck());
-        //updateDistanceCheck();
+        switch(CheckInerval)
+        {
+            case < 35f:
+            CheckInerval ++;
+            Debug.Log(CheckInerval);
+            break;
+
+            case 35f:
+            distancecheck();
+            break;
+
+        }
     }
 
-    IEnumerator distancecheck()
+    private void distancecheck()
     {
+        CheckInerval = 0;
         float PlayerDist;
         PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        //Debug.Log(PlayerDist);
+        Debug.Log(PlayerDist);
         if(PlayerDist < 3.0f)
         {
             disabled = false;
-            yield return new WaitForSecondsRealtime(1);
         }
         else
         {
@@ -66,7 +75,6 @@ public class PlacementNode : MonoBehaviour
             {
                 case true:
                 UnhighlightObj(OccupiedObj);
-                yield return new WaitForSecondsRealtime(1);
                 break;
 
                 case false:
@@ -74,12 +82,9 @@ public class PlacementNode : MonoBehaviour
                 {
                     UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 }
-                yield return new WaitForSecondsRealtime(1);
                 break;
             }
         }
-        StopCoroutine(distancecheck());
-        //yield return new WaitForSecondsRealtime(1);
     }
 
     private void OnMouseOver()
