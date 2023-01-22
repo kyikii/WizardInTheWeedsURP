@@ -94,6 +94,7 @@ public class PlacementNode : MonoBehaviour
             {
                 case true:
                 highlightObj(OccupiedObj);
+                highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
                 case false:
                 highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
@@ -136,6 +137,7 @@ public class PlacementNode : MonoBehaviour
             {
                 case true:
                 UnhighlightObj(OccupiedObj);
+                UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
                 case false:
                 UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
@@ -151,26 +153,31 @@ public class PlacementNode : MonoBehaviour
 
     private void highlightObj(GameObject TargetObj)
     {
-        foreach(Transform child in TargetObj.transform)
+        if(TargetObj != null)
         {
-            if(child.gameObject.tag != "Particle")
+            foreach(Transform child in TargetObj.transform)
             {
-                child.gameObject.layer = 31;
-            }
+                if(child.gameObject.tag != "Particle")
+                {
+                    child.gameObject.layer = 31;
+                }
             
+            }
         }
-        
     }
 
     private void UnhighlightObj(GameObject TargetObj)
     {
-        foreach(Transform child in TargetObj.transform)
+        if(TargetObj != null)
         {
-            if(child.gameObject.tag != "Particle")
+            foreach(Transform child in TargetObj.transform)
             {
-                child.gameObject.layer = 0;
-            }
+                if(child.gameObject.tag != "Particle")
+                {
+                    child.gameObject.layer = 0;
+                }
             
+            }
         }
         
     }
@@ -283,7 +290,8 @@ public class PlacementNode : MonoBehaviour
 
     private void EndLerpCheck()
     {
-        OccupiedObj = null;
+        //OccupiedObj = null;
+        //UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
         Player.GetComponent<Player_Controller>().CamLock = false;
     }
 
