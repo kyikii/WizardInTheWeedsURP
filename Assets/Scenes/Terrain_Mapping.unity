@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 1272425348}
   - component: {fileID: 1272425347}
   - component: {fileID: 1272425346}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ MonoBehaviour:
   playerCam: {fileID: 970842656}
   PlayerGround: {fileID: 611885755}
   mouseSensitivity: 5
-  walkSpeed: 10
+  walkSpeed: 5
   gravity: -13
   lockCursor: 1
   SmoothMove: 0
