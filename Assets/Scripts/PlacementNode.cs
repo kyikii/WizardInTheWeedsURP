@@ -47,7 +47,7 @@ public class PlacementNode : MonoBehaviour
         {
             case < 35f:
             CheckInerval ++;
-            Debug.Log(CheckInerval);
+            //Debug.Log(CheckInerval);
             break;
 
             case 35f:
@@ -62,7 +62,7 @@ public class PlacementNode : MonoBehaviour
         CheckInerval = 0;
         float PlayerDist;
         PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        Debug.Log(PlayerDist);
+        //Debug.Log(PlayerDist);
         if(PlayerDist < 3.0f)
         {
             disabled = false;
@@ -309,7 +309,7 @@ public class PlacementNode : MonoBehaviour
         if(!swap)
         {
             Manager.GetComponent<PlayerManager>().holding = true;
-            //Manager.GetComponent<PlayerManager>().heldObject = OccupiedObj;
+            Manager.GetComponent<PlayerManager>().heldObject = OccupiedObj;
         }
 
         Manager.GetComponent<PlayerManager>().heldObject = OccupiedObj;
@@ -322,10 +322,10 @@ public class PlacementNode : MonoBehaviour
 
     private void PutDownSeq()
     {
-        OccupiedObj = Player.transform.GetChild(2).gameObject;
+        OccupiedObj = Player.transform.GetChild(2).gameObject; //sets the occupied object to be the 
         HoldPoint = Player.gameObject.transform.GetChild(1).gameObject.transform.position; //get the current hold point position
-        Player.transform.GetChild(2).transform.SetParent(this.transform);
-        SetLerpData(HoldPoint,this.transform.GetChild(1).gameObject.transform.position);
+        Player.transform.GetChild(2).transform.SetParent(this.transform); //set player's 3rd gameobject to be a child of the node it's atatached to
+        SetLerpData(HoldPoint,this.transform.GetChild(1).gameObject.transform.position); //set lerp data
         
         if(!swap)
         {
