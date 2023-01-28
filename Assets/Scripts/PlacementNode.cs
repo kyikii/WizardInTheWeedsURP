@@ -14,7 +14,7 @@ public class PlacementNode : MonoBehaviour
     //bool hovering = false;
     public bool occupied, disabled = true;
     //int spriteIndex = 0;
-    private float speed = 6.0f, CheckInerval = 0f;
+    private float speed = 6.0f;
     [SerializeField] float minSpeed;
     
     private float journeyLength = 0, distCovered = 0, startTime;
@@ -34,7 +34,20 @@ public class PlacementNode : MonoBehaviour
         Manager = GameObject.Find("NodeManager");
         //Reticle = GameObject.Find("Reticle");
         //Glyphs = GameObject.Find("GlyphHolder");
+
+        StartCoroutine(DistanceCheck());
     }
+
+    IEnumerator DistanceCheck()
+    {
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            distancecheck();
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -42,28 +55,14 @@ public class PlacementNode : MonoBehaviour
         {
           LerpObjTo();  
         }
-        
-        switch(CheckInerval)
-        {
-            case < 35f:
-            CheckInerval ++;
-            //Debug.Log(CheckInerval);
-            break;
-
-            case 35f:
-            distancecheck();
-            break;
-
-        }
     }
 
-    private void distancecheck()
+    public void distancecheck()
     {
-        CheckInerval = 0;
         float PlayerDist;
         PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        //Debug.Log(PlayerDist);
-        if(PlayerDist < 3.0f)
+        Debug.Log(PlayerDist);
+        if(PlayerDist < 5.0f)
         {
             disabled = false;
         }
@@ -187,7 +186,7 @@ public class PlacementNode : MonoBehaviour
         
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Holdable")
         {
@@ -233,31 +232,6 @@ public class PlacementNode : MonoBehaviour
 
     }
 
-    /*public void updateDistanceCheck()
-    {
-        float PlayerDist;
-        PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        //Debug.Log(PlayerDist);
-        if(PlayerDist < 3.0f)
-        {
-            disabled = false;
-        }
-        else
-        {
-            disabled = true;
-            GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
-            switch(occupied)
-            {
-                case true:
-                UnhighlightObj(OccupiedObj);
-                break;
-                case false:
-                UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
-                break;
-            }
-        }
-    }*/
-
     void SetLerpData(Vector3 startpoint, Vector3 endpoint)
     {
         startTime = Time.time;
@@ -280,22 +254,28 @@ public class PlacementNode : MonoBehaviour
         if(OccupiedObj.transform.position == end)
         {
             lerp = false;
-            if(swap)
+            
+            switch(swap)
             {
+                case true:
                 PutDownSeq();
                 swap = false;
+                //EndLerpCheck();
+                break;
+
+                case false:
                 EndLerpCheck();
-            }
-            else
-            {
-                EndLerpCheck();
-            }            
+                break;
+            }       
         }
     }
 
     private void EndLerpCheck()
     {
-        //OccupiedObj = null;
+        if(!occupied)
+        {
+            OccupiedObj = null;
+        }
         //UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
         Player.GetComponent<Player_Controller>().CamLock = false;
     }
