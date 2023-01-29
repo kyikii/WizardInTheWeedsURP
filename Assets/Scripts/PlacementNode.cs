@@ -22,13 +22,14 @@ public class PlacementNode : MonoBehaviour
     private Vector3 start,end,HoldPoint;
     [SerializeField] private GameObject Player, Manager;
     [SerializeField] private GameObject OccupiedObj;
+    private HighlightScript Highliter;
     //private SpriteRenderer BaseSprite;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Highliter = gameObject.GetComponent<HighlightScript>();
         //BaseSprite = GetComponentInChildren<SpriteRenderer>();
         Player = GameObject.Find("PlayerController");
         Manager = GameObject.Find("NodeManager");
@@ -61,7 +62,7 @@ public class PlacementNode : MonoBehaviour
     {
         float PlayerDist;
         PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        Debug.Log(PlayerDist);
+        //Debug.Log(PlayerDist);
         if(PlayerDist < 5.0f)
         {
             disabled = false;
@@ -73,13 +74,13 @@ public class PlacementNode : MonoBehaviour
             switch(occupied)
             {
                 case true:
-                UnhighlightObj(OccupiedObj);
+                Highliter.UnhighlightObj(OccupiedObj);
                 break;
 
                 case false:
                 if(Manager.GetComponent<PlayerManager>().heldObject != null)
                 {
-                    UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                    Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 }
                 break;
             }
@@ -97,11 +98,11 @@ public class PlacementNode : MonoBehaviour
             switch(occupied)
             {
                 case true:
-                highlightObj(OccupiedObj);
-                highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                Highliter.highlightObj(OccupiedObj);
+                Highliter.highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
                 case false:
-                highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                Highliter.highlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
             }
   
@@ -136,15 +137,14 @@ public class PlacementNode : MonoBehaviour
         {
             GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
             
-
             switch(occupied)
             {
                 case true:
-                UnhighlightObj(OccupiedObj);
-                UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                Highliter.UnhighlightObj(OccupiedObj);
+                Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
                 case false:
-                UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
                 break;
             }
 
@@ -152,38 +152,6 @@ public class PlacementNode : MonoBehaviour
             //Reticle.SendMessage("updateUIState",spriteIndex);
             
         }
-        
-    }
-
-    private void highlightObj(GameObject TargetObj)
-    {
-        if(TargetObj != null)
-        {
-            foreach(Transform child in TargetObj.transform)
-            {
-                if(child.gameObject.tag != "Particle")
-                {
-                    child.gameObject.layer = 31;
-                }
-            
-            }
-        }
-    }
-
-    private void UnhighlightObj(GameObject TargetObj)
-    {
-        if(TargetObj != null)
-        {
-            foreach(Transform child in TargetObj.transform)
-            {
-                if(child.gameObject.tag != "Particle")
-                {
-                    child.gameObject.layer = 0;
-                }
-            
-            }
-        }
-        
     }
 
     void OnTriggerEnter(Collider other)
@@ -278,10 +246,15 @@ public class PlacementNode : MonoBehaviour
         }
         //UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
         Player.GetComponent<Player_Controller>().CamLock = false;
+        if(Manager.GetComponent<PlayerManager>().heldObject != null)
+        {
+            Manager.GetComponent<PlayerManager>().heldObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     private void PickUpSeq()
     {
+        //Manager.GetComponent<PlayerManager>().heldObject.GetComponent<BoxCollider>().enabled = true;//enables the held item's hitbox
         HoldPoint = Player.gameObject.transform.GetChild(1).gameObject.transform.position; //get the current hold point position
         OccupiedObj.transform.SetParent(Player.transform);                                  
         SetLerpData(this.transform.GetChild(1).gameObject.transform.position,HoldPoint);
@@ -302,6 +275,7 @@ public class PlacementNode : MonoBehaviour
 
     private void PutDownSeq()
     {
+        Manager.GetComponent<PlayerManager>().heldObject.GetComponent<BoxCollider>().enabled = true;//enables the held item's hitbox
         OccupiedObj = Player.transform.GetChild(2).gameObject; //sets the occupied object to be the 
         HoldPoint = Player.gameObject.transform.GetChild(1).gameObject.transform.position; //get the current hold point position
         Player.transform.GetChild(2).transform.SetParent(this.transform); //set player's 3rd gameobject to be a child of the node it's atatached to

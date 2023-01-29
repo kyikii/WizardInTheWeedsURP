@@ -8,13 +8,15 @@ public class PlayerManager : MonoBehaviour
     public GameObject heldObject;
     public float PlayerDist;
 
-    public AudioSource PickUp,PutDown;
+    //public AudioSource PickUp,PutDown;
     // Start is called before the first frame update
     void Start()
     {
 
         holding = false;
     }
+
+    //public void 
 
     /*public void updateDistanace()  
     {
