@@ -6,7 +6,9 @@ using TMPro;
 public class WeedManager : MonoBehaviour
 {
     [SerializeField] GameObject WeedTotalIndicator;
-    TMP_Text IndicatorText;
+    [SerializeField] GameObject EndingIndicator;
+    [SerializeField] GameObject GateObject;
+    TMP_Text IndicatorText, EndText;
     private int TotalWeeds = 0, CurrentWeeds;
     
     void Start()
@@ -18,12 +20,33 @@ public class WeedManager : MonoBehaviour
         }
         CurrentWeeds = TotalWeeds;
         IndicatorText = WeedTotalIndicator.GetComponent<TMP_Text>();
+        EndText = EndingIndicator.GetComponent<TMP_Text>();
         IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
     }
 
     public void updateWeedTotal()
     {
-        CurrentWeeds --;
-        IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
+        switch(CurrentWeeds)
+        {
+            case 1:
+            TotalWeeds --;
+            EndingIndicator.gameObject.SetActive(true); //Rise Minion!
+            GateObject.gameObject.SetActive(false); //be GONE thot!
+            IndicatorText.text = "All weeds clear";
+            //end case
+            break;
+
+            case > 1:
+            CurrentWeeds --;
+            IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
+            break;
+        }
+
+        
+        
+        
+        //CurrentWeeds --;
+        //IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
+         
     }
 }
