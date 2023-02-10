@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class TimeDisplay : MonoBehaviour
@@ -11,15 +12,21 @@ public class TimeDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         float LastTime = PlayerPrefs.GetFloat("lastTime");
         TimeText = timeDisplay.GetComponent<TMP_Text>();
 
         TimeText.text = "Completed in "+ LastTime +" seconds";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Restart()
     {
-        
+        SceneManager.LoadScene(0);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
