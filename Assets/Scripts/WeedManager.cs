@@ -21,7 +21,7 @@ public class WeedManager : MonoBehaviour
         CurrentWeeds = TotalWeeds;
         IndicatorText = WeedTotalIndicator.GetComponent<TMP_Text>();
         EndText = EndingIndicator.GetComponent<TMP_Text>();
-        IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
+        IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds";
     }
 
     public void updateWeedTotal()
@@ -38,7 +38,7 @@ public class WeedManager : MonoBehaviour
 
             case > 1:
             CurrentWeeds --;
-            IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
+            IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds";
             break;
         }
 

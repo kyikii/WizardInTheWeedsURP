@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WeedNode : MonoBehaviour
 {
@@ -9,12 +10,17 @@ public class WeedNode : MonoBehaviour
     private WeedManager Manager;
 
     [SerializeField] private int state = 0;
-    private GameObject ModelA,ModelB,ModelC,CurrentModel;
+
+    private GameObject ModelA,ModelB,ModelC,CurrentModel,WeedName;
+    TMP_Text NameText;
 
     void Start()
     {
         Highliter = gameObject.GetComponent<HighlightScript>();
         Manager = gameObject.GetComponentInParent<WeedManager>();
+
+        WeedName = GameObject.Find("WeedName");
+        NameText = WeedName.GetComponent<TMP_Text>();
 
         ModelA = gameObject.transform.GetChild(1).gameObject;
         ModelB = gameObject.transform.GetChild(2).gameObject;
@@ -23,13 +29,16 @@ public class WeedNode : MonoBehaviour
         CurrentModel = gameObject.transform.GetChild(1).gameObject;   
     }
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
         Highliter.highlightObj(CurrentModel);
+        NameText.enabled = true;
+        NameText.text = this.gameObject.name;
     }
     void OnMouseExit()
     {
         Highliter.UnhighlightObj(CurrentModel);
+        NameText.enabled = false;
     }
 
     void OnMouseDown()

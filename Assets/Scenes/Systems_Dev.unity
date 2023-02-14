@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49352
+  m_Name: pb_Mesh72920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -287,6 +287,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &46401405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46401406}
+  m_Layer: 30
+  m_Name: Look Vector (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &46401406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46401405}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
+  m_LocalPosition: {x: 1.33, y: -0.093, z: 6.92}
+  m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 841959707}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &71929009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (5)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -419,7 +450,7 @@ Transform:
   - {fileID: 379374872}
   - {fileID: 809951684}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87279438
 GameObject:
@@ -780,13 +811,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121344094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.13, y: -0.012, z: -3.54}
-  m_LocalScale: {x: 0.82487017, y: 1.3409449, z: 0.86047816}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1612847, y: -0.89, z: -0.319}
+  m_LocalScale: {x: 0.2898451, y: 0.59080267, z: 0.86047816}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 841959707}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &134173936
 PrefabInstance:
@@ -798,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (7)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -1040,6 +1071,14 @@ GameObject:
   - component: {fileID: 275964510}
   - component: {fileID: 275964511}
   - component: {fileID: 275964512}
+  - component: {fileID: 275964518}
+  - component: {fileID: 275964520}
+  - component: {fileID: 275964519}
+  - component: {fileID: 275964517}
+  - component: {fileID: 275964516}
+  - component: {fileID: 275964514}
+  - component: {fileID: 275964513}
+  - component: {fileID: 275964515}
   m_Layer: 0
   m_Name: Statue Flowchart
   m_TagString: Untagged
@@ -1074,7 +1113,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 275964502}
   selectedCommands:
-  - {fileID: 275964504}
+  - {fileID: 275964519}
   variables: []
   description: 
   stepPause: 0
@@ -1115,6 +1154,14 @@ MonoBehaviour:
   - {fileID: 275964507}
   - {fileID: 275964511}
   - {fileID: 275964504}
+  - {fileID: 275964520}
+  - {fileID: 275964519}
+  - {fileID: 275964518}
+  - {fileID: 275964517}
+  - {fileID: 275964516}
+  - {fileID: 275964515}
+  - {fileID: 275964513}
+  - {fileID: 275964514}
   - {fileID: 275964512}
   - {fileID: 275964510}
   suppressAllAutoSelections: 0
@@ -1131,7 +1178,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275964504
 MonoBehaviour:
@@ -1307,6 +1354,273 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &275964513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec82c445301b4e9fb9b89cb2eb6a666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 989305389}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 429570512}
+  _toPosition:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  axis: 0
+  toTransformOLD: {fileID: 0}
+  toPositionOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &275964514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  storyText: 'Good luck weed wizard! '
+  description: 
+  character: {fileID: 643324344}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 601001416}
+--- !u!114 &275964515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: The exit will open once all the weeds are gone. The current weeds in
+    the level are shown in the top left of the screen.
+  description: 
+  character: {fileID: 643324344}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 601001416}
+--- !u!114 &275964516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec82c445301b4e9fb9b89cb2eb6a666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 989305389}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 46401406}
+  _toPosition:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  axis: 0
+  toTransformOLD: {fileID: 0}
+  toPositionOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &275964517
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: You can also left click on highlited objects to pick them up. use the
+    box to get higher places.
+  description: 
+  character: {fileID: 643324344}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 601001416}
+--- !u!114 &275964518
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec82c445301b4e9fb9b89cb2eb6a666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 989305389}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 958250496}
+  _toPosition:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  axis: 0
+  toTransformOLD: {fileID: 0}
+  toPositionOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &275964519
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: These bad boys have been ruining the backyards of southern ontario for
+    generations. Left click on weeds to destroy them.
+  description: 
+  character: {fileID: 643324344}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 601001416}
+--- !u!114 &275964520
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275964495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec82c445301b4e9fb9b89cb2eb6a666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 989305389}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 837378472}
+  _toPosition:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+  axis: 0
+  toTransformOLD: {fileID: 0}
+  toPositionOLD: {x: 0, y: 0, z: 0}
 --- !u!1001 &321651752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1440,7 +1754,7 @@ MonoBehaviour:
   walkSpeed: 3.5
   gravity: -13
   lockCursor: 1
-  SmoothMove: 0.3
+  SmoothMove: 0.158
   SmoothMouse: 0.03
   JumpHeight: 2
   currentDirVelocity: {x: 0, y: 0}
@@ -1474,7 +1788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351982429}
   m_LocalRotation: {x: -0, y: 0.5135938, z: -0, w: 0.85803354}
-  m_LocalPosition: {x: -0.83, y: 1.967, z: 0.47}
+  m_LocalPosition: {x: -1.42, y: 1.967, z: -1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1839,7 +2153,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49508
+  m_Name: pb_Mesh73106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2020,12 +2334,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429570511}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.648, y: 0.19, z: 0.504}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
+  m_LocalPosition: {x: 0.010778306, y: -0.259, z: 0.100127935}
+  m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 510654821}
+  m_Father: {fileID: 841959707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452189925
@@ -2063,8 +2377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -86.20001, y: -18.400024}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 139.5, y: -45.799988}
+  m_SizeDelta: {x: 442.39, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &452189927
 MonoBehaviour:
@@ -2088,8 +2402,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit Opened!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbb162f8ff8a43843921e8e57c3870d7, type: 2}
+  m_sharedMaterial: {fileID: 1550769488623813943, guid: cbb162f8ff8a43843921e8e57c3870d7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2113,8 +2428,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.77
-  m_fontSizeBase: 24.77
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2149,7 +2464,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 105.499695, y: 0, z: -63.741302, w: 12.46109}
+  m_margin: {x: -333.07062, y: 0, z: 181.33777, w: 12.46109}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2534,13 +2849,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510654816}
   m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
-  m_LocalPosition: {x: 7.23868, y: 1.166, z: -3.4548888}
-  m_LocalScale: {x: 0.63530666, y: 0.26682678, z: 0.66273165}
+  m_LocalPosition: {x: -0.12309651, y: -0.371, z: -0.23388886}
+  m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 429570512}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Children: []
+  m_Father: {fileID: 841959707}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.268}
 --- !u!1 &561130719
 GameObject:
@@ -2635,7 +2949,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (3)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -2742,7 +3056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49662
+  m_Name: pb_Mesh73302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3530,7 +3844,7 @@ RectTransform:
   m_GameObject: {fileID: 749963881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24867, y: 0.24867, z: 0.24867}
+  m_LocalScale: {x: 0.64206594, y: 0.64206594, z: 0.64206594}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1378864364}
@@ -3616,8 +3930,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbb162f8ff8a43843921e8e57c3870d7, type: 2}
+  m_sharedMaterial: {fileID: 1550769488623813943, guid: cbb162f8ff8a43843921e8e57c3870d7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3677,7 +3992,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -15.134638, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -3706,7 +4021,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 1550769488623813943, guid: cbb162f8ff8a43843921e8e57c3870d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3736,8 +4051,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757613474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 11.91}
-  m_LocalScale: {x: 0.19852912, y: 0.19852912, z: 0.19852912}
+  m_LocalPosition: {x: 0, y: 0, z: 8.646}
+  m_LocalScale: {x: 0.12307417, y: 0.12307417, z: 0.12307417}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3745,7 +4060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.747, y: 2.891}
+  m_AnchoredPosition: {x: -0.298, y: 3.497}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &783967221 stripped
@@ -4076,7 +4391,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49704
+  m_Name: pb_Mesh73344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4329,6 +4644,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 826720048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &837378471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837378472}
+  m_Layer: 30
+  m_Name: Look Vector (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837378472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837378471}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
+  m_LocalPosition: {x: 2.35, y: 0.325, z: 1.94}
+  m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 841959707}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841959705
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,8 +4704,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.26442027, y: 0.56173927, z: 1.3889335}
-  m_Center: {x: -0.3677896, y: -0.32439813, z: 0.18525937}
+  m_Size: {x: 0.26254693, y: 0.054315254, z: 0.6152774}
+  m_Center: {x: -0.30917725, y: -0.6493338, z: 0.12218305}
 --- !u!4 &841959707
 Transform:
   m_ObjectHideFlags: 0
@@ -4367,14 +4713,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841959705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.589, y: 1.652, z: -3.221}
+  m_LocalRotation: {x: -0, y: -0.26396143, z: -0, w: 0.96453327}
+  m_LocalPosition: {x: 0.915, y: 1.988, z: 0.507}
   m_LocalScale: {x: 2.8459, y: 2.2697, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 429570512}
+  - {fileID: 510654821}
+  - {fileID: 121344099}
+  - {fileID: 958250496}
+  - {fileID: 837378472}
+  - {fileID: 46401406}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: -30.611, z: 0}
 --- !u!114 &841959708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4396,7 +4748,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49578
+  m_Name: pb_Mesh73212
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4560,7 +4912,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49440
+  m_Name: pb_Mesh73034
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4934,7 +5286,7 @@ Transform:
   m_Children:
   - {fileID: 1950612187}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940147162
 GameObject:
@@ -5012,6 +5364,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940147162}
   m_CullTransparentMesh: 1
+--- !u!1 &958250495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958250496}
+  m_Layer: 30
+  m_Name: Look Vector (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958250496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958250495}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
+  m_LocalPosition: {x: 1.962, y: -0.259, z: -2.88}
+  m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 841959707}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &989305389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,7 +5567,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49408
+  m_Name: pb_Mesh73000
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7398,7 +7781,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (2)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -7680,7 +8063,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49478
+  m_Name: pb_Mesh73076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7848,7 +8231,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (4)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -7950,7 +8333,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358786321
 GameObject:
@@ -8013,7 +8396,7 @@ Transform:
   m_Children:
   - {fileID: 1410845615}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -194.617, z: 0}
 --- !u!1001 &1362637995
 PrefabInstance:
@@ -8085,7 +8468,7 @@ PrefabInstance:
     - target: {fileID: 6442349857417285686, guid: 6a96c8aec13fdbb4b9266ddb081c2073,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6442349857417285686, guid: 6a96c8aec13fdbb4b9266ddb081c2073,
         type: 3}
@@ -8319,6 +8702,7 @@ RectTransform:
   - {fileID: 749963882}
   - {fileID: 1631756264}
   - {fileID: 452189926}
+  - {fileID: 1689318503}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9194,7 +9578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 23.099976, y: -19.200012}
+  m_AnchoredPosition: {x: 36, y: -44}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1631756265
@@ -9219,8 +9603,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Weed Total Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cbb162f8ff8a43843921e8e57c3870d7, type: 2}
+  m_sharedMaterial: {fileID: 1550769488623813943, guid: cbb162f8ff8a43843921e8e57c3870d7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9244,8 +9629,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.77
-  m_fontSizeBase: 24.77
+  m_fontSize: 60.3
+  m_fontSizeBase: 60.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9280,7 +9665,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -63.741302, w: 12.46109}
+  m_margin: {x: 0, y: 0, z: -564.0804, w: -47.029022}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9672,6 +10057,144 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1689318502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689318503}
+  - component: {fileID: 1689318505}
+  - component: {fileID: 1689318504}
+  m_Layer: 5
+  m_Name: WeedName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1689318503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689318502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378864364}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 442.39, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1689318504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689318502}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'highlited weed text
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cbb162f8ff8a43843921e8e57c3870d7, type: 2}
+  m_sharedMaterial: {fileID: 1550769488623813943, guid: cbb162f8ff8a43843921e8e57c3870d7,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -120.49396, y: 0, z: -167.64233, w: 12.46109}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1689318505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689318502}
+  m_CullTransparentMesh: 1
 --- !u!4 &1716120035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
@@ -9861,7 +10384,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (6)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -9930,7 +10453,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (8)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -10156,7 +10679,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode (1)
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -10231,7 +10754,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: WeedNode
+      value: Wild Parsnip Weed
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -10305,7 +10828,7 @@ PrefabInstance:
     - target: {fileID: 4461618454533259225, guid: 45ddeab9d4a0d6d42b322814a15e6e49,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4461618454533259225, guid: 45ddeab9d4a0d6d42b322814a15e6e49,
         type: 3}
