@@ -8,11 +8,14 @@ public class WeedNode : MonoBehaviour
 
     private HighlightScript Highliter;
     private WeedManager Manager;
+    bool disabled;
 
     [SerializeField] private int state = 0;
 
     private GameObject ModelA,ModelB,ModelC,CurrentModel,WeedName;
     TMP_Text NameText;
+
+    private GameManager GM;
 
     void Start()
     {
@@ -20,6 +23,7 @@ public class WeedNode : MonoBehaviour
         Manager = gameObject.GetComponentInParent<WeedManager>();
 
         WeedName = GameObject.Find("WeedName");
+        GM = GetComponentInParent<GameManager>();
         NameText = WeedName.GetComponent<TMP_Text>();
 
         ModelA = gameObject.transform.GetChild(1).gameObject;
@@ -29,11 +33,21 @@ public class WeedNode : MonoBehaviour
         CurrentModel = gameObject.transform.GetChild(1).gameObject;   
     }
 
-    void OnMouseEnter()
+    void OnMouseOver()
     {
-        Highliter.highlightObj(CurrentModel);
-        NameText.enabled = true;
-        NameText.text = this.gameObject.name;
+        if(GM.HoveredObject.collider != null)
+        {
+            Highliter.highlightObj(CurrentModel);
+            NameText.enabled = true;
+            NameText.text = this.gameObject.name;
+        }
+
+        else if(GM.HoveredObject.collider == null)
+        {
+            Highliter.UnhighlightObj(CurrentModel);
+            NameText.enabled = false;
+        }
+
     }
     void OnMouseExit()
     {
@@ -43,7 +57,7 @@ public class WeedNode : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(state < 4)
+        if(state < 4 && GM.HoveredObject.collider != null)
         {
             UpdateState();
         }

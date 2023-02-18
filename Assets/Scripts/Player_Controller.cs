@@ -90,6 +90,12 @@ public class Player_Controller : MonoBehaviour
             Debug.Log("Jumped");
         }
     }
+    public void LockCam()
+    {
+        CamLock = true;
+        
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     public void unlockCam()
     {

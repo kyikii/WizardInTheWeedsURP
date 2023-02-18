@@ -9,6 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] GameObject PreferedDialogueBox;
 
     [SerializeField] Player_Controller player;
+
+    [SerializeField] GameObject HeadPoint; 
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,12 @@ public class DialogueTrigger : MonoBehaviour
             PreferedChart.SendFungusMessage("Start Dialogue");
             Cursor.lockState = CursorLockMode.None;
         }
+        
+    }
+
+    public void resetCam()
+    {
+        //if(PreferedChart.isActiveAndEnabled == true)
         
     }
 }

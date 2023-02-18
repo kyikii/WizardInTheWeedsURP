@@ -20,7 +20,7 @@ public class TimeDisplay : MonoBehaviour
         TimeText.text = "Completed in "+ LastTime +" seconds";
     }
 
-    public void Restart()
+    public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }

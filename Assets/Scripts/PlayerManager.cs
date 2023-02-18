@@ -15,6 +15,10 @@ public class PlayerManager : MonoBehaviour
 
         holding = false;
     }
+    public void UpdateDistance()
+    {
+        
+    }
 
     //public void 
 

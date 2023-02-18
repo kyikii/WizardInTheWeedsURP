@@ -12,7 +12,7 @@ public class PlacementNode : MonoBehaviour
     
 
     //bool hovering = false;
-    public bool occupied, disabled = true;
+    public bool occupied;
     //int spriteIndex = 0;
     private float speed = 6.0f;
     [SerializeField] float minSpeed;
@@ -20,33 +20,26 @@ public class PlacementNode : MonoBehaviour
     private float journeyLength = 0, distCovered = 0, startTime;
     private bool lerp=false, swap=false;
     private Vector3 start,end,HoldPoint;
-    [SerializeField] private GameObject Player, Manager;
+    [SerializeField] private GameObject Player, Manager,GameManager;
     [SerializeField] private GameObject OccupiedObj;
     private HighlightScript Highliter;
+    private GameManager GM;
     //private SpriteRenderer BaseSprite;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Highliter = gameObject.GetComponent<HighlightScript>();
-        //BaseSprite = GetComponentInChildren<SpriteRenderer>();
+        
+
         Player = GameObject.Find("PlayerController");
         Manager = GameObject.Find("NodeManager");
+        GameManager = GameObject.Find("GameManager");
         //Reticle = GameObject.Find("Reticle");
-        //Glyphs = GameObject.Find("GlyphHolder");
 
-        StartCoroutine(DistanceCheck());
-    }
-
-    IEnumerator DistanceCheck()
-    {
-        while (true)
-        {
-            yield return new WaitForFixedUpdate();
-            distancecheck();
-            yield return new WaitForSeconds(1);
-        }
+        Highliter = gameObject.GetComponent<HighlightScript>();
+        GM = GameManager.GetComponent<GameManager>();
+        //StartCoroutine(DistanceCheck());
     }
 
     // Update is called once per frame
@@ -58,38 +51,10 @@ public class PlacementNode : MonoBehaviour
         }
     }
 
-    public void distancecheck()
-    {
-        float PlayerDist;
-        PlayerDist = Vector3.Distance(this.transform.position,Player.transform.position);
-        //Debug.Log(PlayerDist);
-        if(PlayerDist < 5.0f)
-        {
-            disabled = false;
-        }
-        else
-        {
-            disabled = true;
-            GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
-            switch(occupied)
-            {
-                case true:
-                Highliter.UnhighlightObj(OccupiedObj);
-                break;
-
-                case false:
-                if(Manager.GetComponent<PlayerManager>().heldObject != null)
-                {
-                    Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
-                }
-                break;
-            }
-        }
-    }
 
     private void OnMouseOver()
     { 
-        if(!disabled && !lerp)
+        if(!lerp && GM.HoveredObject.collider != null)
         {
             GetComponentInChildren<SpriteRenderer>().sprite = ActiveSprite;
           
@@ -130,11 +95,28 @@ public class PlacementNode : MonoBehaviour
             }*/
 
         }
+        else if(GM.HoveredObject.collider == null)
+        {
+            GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
+            switch(occupied)
+            {
+                case true:
+                Highliter.UnhighlightObj(OccupiedObj);
+                break;
+
+                case false:
+                if(Manager.GetComponent<PlayerManager>().heldObject != null)
+                {
+                    Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+                }
+                break;
+            }
+        }
     }
     private void OnMouseExit()
     {  
-        if(!disabled)
-        {
+        
+        
             GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
             
             switch(occupied)
@@ -151,7 +133,7 @@ public class PlacementNode : MonoBehaviour
             //spriteIndex = 0;
             //Reticle.SendMessage("updateUIState",spriteIndex);
             
-        }
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -173,19 +155,19 @@ public class PlacementNode : MonoBehaviour
     private void OnMouseDown()
     {
         //pick something up
-        if (!Manager.GetComponent<PlayerManager>().holding && occupied && !disabled && !lerp)
+        if (!Manager.GetComponent<PlayerManager>().holding && occupied && !lerp && GM.HoveredObject.collider != null)
         {
             //gameObject.GetComponentInParent<PlayerManager>().PickUp.Play();
             PickUpSeq();
         }
         //put something down
-        else if(Manager.GetComponent<PlayerManager>().holding && !occupied && !disabled && !lerp)
+        else if(Manager.GetComponent<PlayerManager>().holding && !occupied && !lerp && GM.HoveredObject.collider != null)
         {
             //gameObject.GetComponentInParent<PlayerManager>().PutDown.Play();
             PutDownSeq();
         }
         //Swap two items
-        else if(Manager.GetComponent<PlayerManager>().holding && occupied && !disabled && !lerp && !swap)
+        else if(Manager.GetComponent<PlayerManager>().holding && occupied && !lerp && !swap && GM.HoveredObject.collider != null)
         {
             //gameObject.GetComponentInParent<PlayerManager>().PickUp.Play();
             PickUpSeq();
