@@ -42,12 +42,6 @@ public class WeedManager : MonoBehaviour
             break;
         }
         //CurrentWeeds --;
-        //IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";
-         
-    }
-
-    public void UpdateDistance()
-    {
-        
+        //IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds Remaining";    
     }
 }

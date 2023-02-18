@@ -14,7 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PreferedDialogueBox.SetActive(true);
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -25,12 +25,6 @@ public class DialogueTrigger : MonoBehaviour
             PreferedChart.SendFungusMessage("Start Dialogue");
             Cursor.lockState = CursorLockMode.None;
         }
-        
-    }
-
-    public void resetCam()
-    {
-        //if(PreferedChart.isActiveAndEnabled == true)
         
     }
 }
