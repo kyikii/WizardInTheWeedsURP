@@ -46,8 +46,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(HoveredObject.collider.name);
         }
-        //NodeManager.BroadcastMessage("UpdateDistance");
-        //WeedManager.BroadcastMessage("UpdateDistance");
     }
 
     void BookActivation()

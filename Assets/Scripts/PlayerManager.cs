@@ -12,18 +12,6 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         holding = false;
     }
-    public void UpdateDistance()
-    {
-        
-    }
-
-    //public void 
-
-    /*public void updateDistanace()  
-    {
-        BroadcastMessage("updateDistanceCheck");
-    }*/
 }
