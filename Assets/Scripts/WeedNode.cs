@@ -15,12 +15,14 @@ public class WeedNode : MonoBehaviour
     private GameObject ModelA,ModelB,ModelC,CurrentModel,WeedName;
     TMP_Text NameText;
 
+    private ParticleSystem poof;
     private GameManager GM;
 
     void Start()
     {
         Highliter = gameObject.GetComponent<HighlightScript>();
         Manager = gameObject.GetComponentInParent<WeedManager>();
+        poof = gameObject.GetComponent<ParticleSystem>();
 
         WeedName = GameObject.Find("WeedName");
         GM = GetComponentInParent<GameManager>();
@@ -60,6 +62,8 @@ public class WeedNode : MonoBehaviour
         if(state < 4 && GM.HoveredObject.collider != null)
         {
             UpdateState();
+            //poof.Clear();
+            poof.Play();
         }
     }
 
