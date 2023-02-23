@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1586627553}
-  m_IndirectSpecularColor: {r: 0.09670949, g: 0.21787933, b: 0.3685009, a: 1}
+  m_IndirectSpecularColor: {r: 0.09671548, g: 0.21786425, b: 0.36861145, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -402,8 +402,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: 'Heya darling, this is the weed codex. unfortunately for you lovelies
-    some one else is going to write it out. '
+  storyText: "This is the codex system mechanic within Wizards in the Weeds! This
+    codex functions as a means to read about the various different types of weeds
+    you find within the game, the tools you use and the overall lore of the game
+    itself.\n\nFor the purposes of this playtest, this is a hint to what will be
+    offered for future content/playtests.\n\n'Aahhh Yes, the Pastinaca Sativa. Otherwise
+    known as the WILD PARSNIP. this flora likes to grow in grassy areas or nearby
+    forest trails and grows tall like the towering giants of old!! \n\nWild Parsnip
+    have an defense mechanism when it's stem is distrubed. When disturbed, a sap
+    is released and if it makes contact with your skin, it will cause irritation
+    and in more extreme cases, cause second degree burns!!"
   description: 
   character: {fileID: 4245376628474228361}
   portrait: {fileID: 0}
@@ -448,7 +456,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 69.125
     y: 76.25
-    width: 105.88228
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -477,21 +485,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 676.3526, y: 186.57877}
+  scrollPos: {x: 621.875, y: 29.25}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.34000045
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 29441410}
-  selectedCommands:
-  - {fileID: 29441415}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2228,7 +2234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 5.049835, y: 141.5802}
+  scrollPos: {x: 557.0498, y: 15.5802}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 566
@@ -2241,7 +2247,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 275964502}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 275964514}
   variables:
   - {fileID: 275964525}
   - {fileID: 275964524}
@@ -2326,7 +2333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: yo home boy, its time to clean up some weeds.
+  storyText: This is the tutorial pedestal! It's time to remove some weeds.
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 0}
@@ -2539,7 +2546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: 'Good luck weed wizard! '
+  storyText: It's time to start weeding! Good luck Weeding Wizard!
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 0}
@@ -2566,8 +2573,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: The exit will open once all the weeds are gone. The current weeds in
-    the level are shown in the top left of the screen.
+  storyText: The current remaining weeds in the level are shown in the top left corner
+    of the screen counting down from max to zero. The exit will open once all the
+    weeds are gone.
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 0}
@@ -2633,8 +2641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: You can also left click on highlited objects to pick them up. use the
-    box to get higher places.
+  storyText: Highlighted objects can be picked up. Use the box to get to higher places!
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 0}
@@ -2700,8 +2707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: These bad boys have been ruining the backyards of southern ontario for
-    generations. Left click on weeds to destroy them.
+  storyText: These invasive weeds have been destroying the local ecosystem for far
+    too long! Left click on the weeds to remove them!
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 0}
@@ -12169,7 +12176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 29441411}
+  selectedFlowchart: {fileID: 275964496}
 --- !u!4 &1347190671
 Transform:
   m_ObjectHideFlags: 1
@@ -13675,6 +13682,7 @@ GameObject:
   - component: {fileID: 1624445997}
   - component: {fileID: 1624446002}
   - component: {fileID: 1624446001}
+  - component: {fileID: 1624446003}
   m_Layer: 0
   m_Name: Start Flowchart
   m_TagString: Untagged
@@ -13695,7 +13703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -39, y: 103}
+  scrollPos: {x: 513, y: -100.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -13708,7 +13716,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1624445998}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1624445997}
   variables: []
   description: 
   stepPause: 0
@@ -13734,10 +13743,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: 'Heeyyyyyy, walk up to the pedistal to get the tutorial.
+  storyText: 'Well met Traveler to the 2nd playtest of Wizards in the Weeds!
 
-    Click
-    to continue'
+    Press
+    WASD to move and use mouse to look around.'
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 21300000, guid: 3c419229ecb292449b7974ef71bae64b, type: 3}
@@ -13764,7 +13773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 179
+    x: 178
     y: 206
     width: 111
     height: 40
@@ -13777,6 +13786,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1624446002}
   - {fileID: 1624445997}
+  - {fileID: 1624446003}
   - {fileID: 1624446001}
   suppressAllAutoSelections: 0
 --- !u!114 &1624445999
@@ -13843,6 +13853,34 @@ MonoBehaviour:
   targetObject: {fileID: 351982429}
   methodName: LockCam
   delay: 0
+--- !u!114 &1624446003
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624445995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: Walk up to the PEDESTAL to get the tutorial. You can also press [TAB]
+    to access the codex!
+  description: 
+  character: {fileID: 643324344}
+  portrait: {fileID: 21300000, guid: 3c419229ecb292449b7974ef71bae64b, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 601001416}
 --- !u!1001 &1627761104
 PrefabInstance:
   m_ObjectHideFlags: 0

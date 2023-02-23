@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.638
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.061700657, g: 0.13900702, b: 0.23510358, a: 0.638}
+  m_IndirectSpecularColor: {r: 0.06170448, g: 0.13899739, b: 0.23517412, a: 0.638}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2253,7 +2253,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251906
+  m_Name: pb_Mesh125930
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3021,7 +3021,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252304
+  m_Name: pb_Mesh126346
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4028,7 +4028,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251716
+  m_Name: pb_Mesh125710
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7216,7 +7216,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251818
+  m_Name: pb_Mesh125812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7473,7 +7473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251738
+  m_Name: pb_Mesh125732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7801,7 +7801,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252356
+  m_Name: pb_Mesh126398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7965,7 +7965,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252694
+  m_Name: pb_Mesh126736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9873,7 +9873,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251860
+  m_Name: pb_Mesh125878
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11264,7 +11264,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251560
+  m_Name: pb_Mesh125554
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20560,7 +20560,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-30610828
+  m_Name: pb_Mesh125862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22134,7 +22134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -39, y: 103}
+  scrollPos: {x: 512, y: -127}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -22147,7 +22147,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 464316769}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 464316771}
   variables: []
   description: 
   stepPause: 0
@@ -22219,10 +22220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: 'Heeyyyyyy, walk up to the pedistal to get the tutorial.
-
-    Click
-    to continue'
+  storyText: Walk up the path to get a way of the land beyond...
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -23278,21 +23276,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 138.83269, y: 320.88675}
+  scrollPos: {x: 623.2557, y: 32.375}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.64000034
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 529548992}
-  selectedCommands:
-  - {fileID: 529548995}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -23320,7 +23316,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67.5625
     y: 73.125
-    width: 107.81247
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -23397,8 +23393,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: Hey weed wizard, this is the codex. unfortunately it dosnt exist yet
-    but it will eventually be full of useful information about weeds.
+  storyText: "This is the codex system mechanic within Wizards in the Weeds! This
+    codex functions as a means to read about the various different types of weeds
+    you find within the game, the tools you use and the overall lore of the game
+    itself.\n\nFor the purposes of this playtest, this is a hint to what will be
+    offered for future content/playtests.\n\n'Aahhh Yes, the Pastinaca Sativa. Otherwise
+    known as the WILD PARSNIP. this flora likes to grow in grassy areas or nearby
+    forest trails and grows tall like the towering giants of old!! \n\nWild Parsnip
+    have an defense mechanism when it's stem is distrubed. When disturbed, a sap
+    is released and if it makes contact with your skin, it will cause irritation
+    and in more extreme cases, cause second degree burns!!"
   description: 
   character: {fileID: 874572726}
   portrait: {fileID: 0}
@@ -24083,7 +24087,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252240
+  m_Name: pb_Mesh126276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24247,7 +24251,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252740
+  m_Name: pb_Mesh126782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25245,7 +25249,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252014
+  m_Name: pb_Mesh126040
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26543,7 +26547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251184
+  m_Name: pb_Mesh125174
   serializedVersion: 10
   m_SubMeshes: []
   m_Shapes:
@@ -26851,7 +26855,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251296
+  m_Name: pb_Mesh125286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28494,7 +28498,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252918
+  m_Name: pb_Mesh126990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29406,7 +29410,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251360
+  m_Name: pb_Mesh125350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30052,7 +30056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252334
+  m_Name: pb_Mesh126376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30216,7 +30220,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252888
+  m_Name: pb_Mesh126960
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31629,7 +31633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897667049}
   m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
-  m_LocalPosition: {x: 1.819, y: -0.213, z: 12.45}
+  m_LocalPosition: {x: 3.272, y: -2.507, z: 9.22}
   m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33293,7 +33297,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251528
+  m_Name: pb_Mesh125520
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34510,6 +34514,7 @@ GameObject:
   - component: {fileID: 1000144839}
   - component: {fileID: 1000144836}
   - component: {fileID: 1000144835}
+  - component: {fileID: 1000144856}
   m_Layer: 0
   m_Name: Info Flowchart
   m_TagString: Untagged
@@ -34530,10 +34535,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 54.049835, y: 248.5802}
+  scrollPos: {x: 556.0498, y: 16.5802}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 566
+  blockViewHeight: 660
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -34543,8 +34548,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1000144837}
-  selectedCommands:
-  - {fileID: 1000144847}
+  selectedCommands: []
   variables:
   - {fileID: 1000144836}
   - {fileID: 1000144835}
@@ -34603,7 +34607,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 134.95016
-    y: 63.4198
+    y: 62.4198
     width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -34617,6 +34621,7 @@ MonoBehaviour:
   - {fileID: 1000144852}
   - {fileID: 1000144851}
   - {fileID: 1000144850}
+  - {fileID: 1000144856}
   - {fileID: 1000144848}
   - {fileID: 1000144847}
   - {fileID: 1000144846}
@@ -34708,7 +34713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: 'Good luck weed wizard! '
+  storyText: It's time to start weeding! Good luck Weeding Wizard!
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -34774,8 +34779,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: The exit will open once all the weeds are gone. The current weeds in
-    the level are shown in the top left of the screen.
+  storyText: The current remaining weeds in the level are shown in the top left corner
+    of the screen counting down from max to zero. The exit will open once all the
+    weeds are gone.
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -34841,8 +34847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: You can also left click on highlited objects to pick them up. use the
-    box to get higher places.
+  storyText: When you have the time... come and speak to me O great Weeding Wizard
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -34908,8 +34913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: These bad boys have been ruining the backyards of southern ontario for
-    generations. Left click on weeds to destroy them.
+  storyText: STRIKE BACK AGAINST THESE CREEPING VINES!!
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -34975,7 +34979,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: yo home boy, its time to clean up some weeds.
+  storyText: 'Welcome to the Main Yard. Here is where the invasive weeds are the
+    most dense. They have sprouted and grown, preventing other more pleasant plants
+    from growing...
+
+'
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -35103,6 +35111,35 @@ Transform:
   m_Father: {fileID: 381546115}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000144856
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000144833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: '{vpunch=10,0.5}BUT NO MORE!
+
+'
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
 --- !u!1 &1003326519
 GameObject:
   m_ObjectHideFlags: 0
@@ -39126,7 +39163,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252080
+  m_Name: pb_Mesh126116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39426,7 +39463,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251346
+  m_Name: pb_Mesh125336
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39590,7 +39627,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252106
+  m_Name: pb_Mesh126142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40575,7 +40612,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252784
+  m_Name: pb_Mesh126826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40897,7 +40934,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252520
+  m_Name: pb_Mesh126562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41151,7 +41188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252376
+  m_Name: pb_Mesh126418
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42935,7 +42972,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251938
+  m_Name: pb_Mesh125962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43703,7 +43740,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252440
+  m_Name: pb_Mesh126482
   serializedVersion: 10
   m_SubMeshes: []
   m_Shapes:
@@ -43926,7 +43963,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251782
+  m_Name: pb_Mesh125776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44090,7 +44127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252390
+  m_Name: pb_Mesh126432
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46045,7 +46082,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252482
+  m_Name: pb_Mesh126524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46209,7 +46246,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251330
+  m_Name: pb_Mesh125320
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46954,7 +46991,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251992
+  m_Name: pb_Mesh126018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48322,7 +48359,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251264
+  m_Name: pb_Mesh125254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48626,7 +48663,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252580
+  m_Name: pb_Mesh126624
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49107,7 +49144,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251700
+  m_Name: pb_Mesh125694
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49437,7 +49474,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251662
+  m_Name: pb_Mesh125656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49607,7 +49644,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252830
+  m_Name: pb_Mesh126900
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49858,7 +49895,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251514
+  m_Name: pb_Mesh125506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51233,7 +51270,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252754
+  m_Name: pb_Mesh126796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52257,7 +52294,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252254
+  m_Name: pb_Mesh126290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52911,7 +52948,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252126
+  m_Name: pb_Mesh126162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -53664,7 +53701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691610547}
   m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
-  m_LocalPosition: {x: 19.53, y: -3.24, z: -0.79}
+  m_LocalPosition: {x: 9.766, y: -2.009, z: 3.09}
   m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53921,7 +53958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252092
+  m_Name: pb_Mesh126128
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54085,7 +54122,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252318
+  m_Name: pb_Mesh126360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -57838,7 +57875,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252196
+  m_Name: pb_Mesh126232
   serializedVersion: 10
   m_SubMeshes: []
   m_Shapes:
@@ -58282,7 +58319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251574
+  m_Name: pb_Mesh125568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58446,7 +58483,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252272
+  m_Name: pb_Mesh126308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58694,7 +58731,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252506
+  m_Name: pb_Mesh126548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58858,7 +58895,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251610
+  m_Name: pb_Mesh125604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59028,7 +59065,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251314
+  m_Name: pb_Mesh125304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59215,7 +59252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 464316768}
+  selectedFlowchart: {fileID: 2018894408}
 --- !u!4 &1791168403
 Transform:
   m_ObjectHideFlags: 1
@@ -59377,7 +59414,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251498
+  m_Name: pb_Mesh125490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59855,7 +59892,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252174
+  m_Name: pb_Mesh126210
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -62512,7 +62549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935797578}
   m_LocalRotation: {x: -0, y: -0, z: 0.14148724, w: 0.9899401}
-  m_LocalPosition: {x: 3.978, y: -0.259, z: -0.16}
+  m_LocalPosition: {x: 8.253, y: -2.09, z: -12.408}
   m_LocalScale: {x: 0.22683978, y: 0.11526415, z: 0.66273165}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63184,7 +63221,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252536
+  m_Name: pb_Mesh126578
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -63348,7 +63385,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251964
+  m_Name: pb_Mesh125990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -64484,7 +64521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh251686
+  m_Name: pb_Mesh125680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -65476,6 +65513,12 @@ GameObject:
   - component: {fileID: 2018894399}
   - component: {fileID: 2018894398}
   - component: {fileID: 2018894397}
+  - component: {fileID: 2018894414}
+  - component: {fileID: 2018894409}
+  - component: {fileID: 2018894413}
+  - component: {fileID: 2018894412}
+  - component: {fileID: 2018894411}
+  - component: {fileID: 2018894410}
   m_Layer: 0
   m_Name: Statue Flowchart
   m_TagString: Untagged
@@ -65712,7 +65755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Hey im the satue
+  storyText: Come Weeding Wizard and hear the tale of this once glorious yard!...
   description: 
   character: {fileID: 283491940}
   portrait: {fileID: 0}
@@ -65755,9 +65798,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 134.95016
+    x: 136.51266
     y: 63.4198
-    width: 105.10199
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65770,6 +65813,12 @@ MonoBehaviour:
   - {fileID: 2018894404}
   - {fileID: 2018894401}
   - {fileID: 2018894405}
+  - {fileID: 2018894414}
+  - {fileID: 2018894409}
+  - {fileID: 2018894413}
+  - {fileID: 2018894412}
+  - {fileID: 2018894411}
+  - {fileID: 2018894410}
   - {fileID: 2018894399}
   - {fileID: 2018894400}
   - {fileID: 2018894402}
@@ -65787,11 +65836,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 314.2225, y: 472.32443}
+  scrollPos: {x: 556.0811, y: 15.5802}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 566
-  zoom: 0.49000046
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -65801,7 +65850,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2018894407}
   selectedCommands:
-  - {fileID: 2018894400}
+  - {fileID: 2018894410}
   variables:
   - {fileID: 2018894398}
   - {fileID: 2018894397}
@@ -65815,6 +65864,177 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &2018894409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: But... they have yet to return... The yard has sadly fallen into a state
+    of disarray due to these invasive weeds.
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
+--- !u!114 &2018894410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: The war on these invaders goes ever onwards. However it is now up to
+    you, Weeding Wizard. Be my Champion and save this yard! I must rest now...
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
+--- !u!114 &2018894411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: The Creeping Vine. You can find them growing on cliffs and strucutures.
+    Their branches are strong and they spread continously, creeping into your homes
+    through windows and walls. Not even stone can stop them!
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
+--- !u!114 &2018894412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  storyText: Wild Parsnip. A numerous swarm if left unchecked that will devour entire
+    fields if given enough time. You can tell what they look like by how they group
+    in bunches or their yellow buds.
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
+--- !u!114 &2018894413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: Wild Parsnip, Creeping Vine, Bull Thistle! These are our ancient  enemies
+    on the battlefield of botany. You must be observant for where they grow...
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
+--- !u!114 &2018894414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018894395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: Once it was a beautiful yard. The previous owner of this yard was diligent
+    in dutifully removing these unpleasant plants. Since they left for an AN EPIC
+    QUEST!
+  description: 
+  character: {fileID: 283491940}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1552512474}
 --- !u!1 &2019346705
 GameObject:
   m_ObjectHideFlags: 0
@@ -66998,7 +67218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-30610830
+  m_Name: pb_Mesh125848
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67238,7 +67458,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252874
+  m_Name: pb_Mesh126946
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68930,7 +69150,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252600
+  m_Name: pb_Mesh126644
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -69094,7 +69314,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh252810
+  m_Name: pb_Mesh126880
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
