@@ -23,7 +23,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             player.CamLock = true;
             PreferedChart.SendFungusMessage("Start Dialogue");
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
         }
         
     }

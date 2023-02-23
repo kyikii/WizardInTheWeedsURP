@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject NodeManager,WeedManager,Player;
     [SerializeField] Flowchart start_FC,statue_FC,codex_FC;
     [SerializeField] int CastDistance = 5;
-    public RaycastHit HoveredObject;
+    public RaycastHit RayOut; 
+    public GameObject HoveredObject,NillObj;
 
     IEnumerator Raycast()
     {
@@ -18,6 +19,14 @@ public class GameManager : MonoBehaviour
             yield return new WaitForFixedUpdate();
             UpdateRaycast();
             
+            if(RayOut.collider == null)
+            {
+                HoveredObject = NillObj;
+            }
+            else
+            {
+                HoveredObject = RayOut.collider.gameObject;
+            }
             yield return new WaitForSeconds(0.3f);
         }
     }
@@ -25,6 +34,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HoveredObject = NillObj;
         StartCoroutine(Raycast());
     }
 
@@ -36,15 +46,15 @@ public class GameManager : MonoBehaviour
 
     void UpdateRaycast()
     {
-        Physics.Raycast(Player.transform.position, Player.transform.forward, out HoveredObject, CastDistance);
+        Physics.Raycast(Player.transform.position, Player.transform.forward, out RayOut, CastDistance);
         Debug.DrawRay(Player.transform.position, Player.transform.forward * CastDistance, Color.red ,10);
-        if(HoveredObject.collider == null)
+        if(HoveredObject == NillObj)
         {
             Debug.Log("Null");
         }
         else
         {
-            Debug.Log(HoveredObject.collider.name);
+            Debug.Log(HoveredObject.name);
         }
     }
 

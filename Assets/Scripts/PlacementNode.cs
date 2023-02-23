@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class PlacementNode : MonoBehaviour
 {
@@ -20,26 +20,27 @@ public class PlacementNode : MonoBehaviour
     private float journeyLength = 0, distCovered = 0, startTime;
     private bool lerp=false, swap=false;
     private Vector3 start,end,HoldPoint;
-    [SerializeField] private GameObject Player, Manager,GameManager;
+    [SerializeField] private GameObject Player, Manager,GameManager, WeedName;
     [SerializeField] private GameObject OccupiedObj;
     private HighlightScript Highliter;
     private GameManager GM;
+
+    private TMP_Text NameText;
     //private SpriteRenderer BaseSprite;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        WeedName = GameObject.Find("WeedName");
         Player = GameObject.Find("PlayerController");
         Manager = GameObject.Find("NodeManager");
         GameManager = GameObject.Find("GameManager");
         //Reticle = GameObject.Find("Reticle");
 
+        NameText = WeedName.GetComponent<TMP_Text>();
         Highliter = gameObject.GetComponent<HighlightScript>();
         GM = GameManager.GetComponent<GameManager>();
-        //StartCoroutine(DistanceCheck());
     }
 
     // Update is called once per frame
@@ -54,12 +55,11 @@ public class PlacementNode : MonoBehaviour
 
     private void OnMouseOver()
     { 
-        if(!lerp && GM.HoveredObject.collider != null)
+        if(!lerp && GM.HoveredObject.gameObject == this.gameObject)
         {
             GetComponentInChildren<SpriteRenderer>().sprite = ActiveSprite;
-          
-            //if(OccupiedObj.layer !=31 && OccupiedObj !=null)
-            
+            //NameText.text = 
+
             switch(occupied)
             {
                 case true:
@@ -95,7 +95,7 @@ public class PlacementNode : MonoBehaviour
             }*/
 
         }
-        else if(GM.HoveredObject.collider == null)
+        else if(GM.HoveredObject == GM.NillObj)
         {
             GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
             switch(occupied)
@@ -114,21 +114,21 @@ public class PlacementNode : MonoBehaviour
         }
     }
     private void OnMouseExit()
-    {  
-        
-        
-            GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
-            
-            switch(occupied)
-            {
-                case true:
-                Highliter.UnhighlightObj(OccupiedObj);
-                Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
-                break;
-                case false:
-                Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
-                break;
-            }
+    {   
+        GetComponentInChildren<SpriteRenderer>().sprite = InactiveSprite;
+
+
+
+        switch(occupied)
+        {
+            case true:
+            Highliter.UnhighlightObj(OccupiedObj);
+            Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+            break;
+            case false:
+            Highliter.UnhighlightObj(Manager.GetComponent<PlayerManager>().heldObject);
+            break;
+        }
 
             //spriteIndex = 0;
             //Reticle.SendMessage("updateUIState",spriteIndex);
@@ -154,32 +154,34 @@ public class PlacementNode : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //pick something up
-        if (!Manager.GetComponent<PlayerManager>().holding && occupied && !lerp && GM.HoveredObject.collider != null)
+        if(!lerp && GM.HoveredObject.gameObject == this.gameObject)
         {
+            //pick something up
+            if (!Manager.GetComponent<PlayerManager>().holding && occupied)
+            {
+                //gameObject.GetComponentInParent<PlayerManager>().PickUp.Play();
+                PickUpSeq();
+            }
+            //put something down
+            else if(Manager.GetComponent<PlayerManager>().holding && !occupied)
+            {
+                //gameObject.GetComponentInParent<PlayerManager>().PutDown.Play();
+                PutDownSeq();
+            }
+            //Swap two items
+            else if(Manager.GetComponent<PlayerManager>().holding && occupied && !swap)
+            {
             //gameObject.GetComponentInParent<PlayerManager>().PickUp.Play();
-            PickUpSeq();
+                PickUpSeq();
+                swap = true;
+                Debug.Log("Swap");
+            }
+            //otherwise null
+            else
+            {
+                Debug.Log("nothing");
+            }
         }
-        //put something down
-        else if(Manager.GetComponent<PlayerManager>().holding && !occupied && !lerp && GM.HoveredObject.collider != null)
-        {
-            //gameObject.GetComponentInParent<PlayerManager>().PutDown.Play();
-            PutDownSeq();
-        }
-        //Swap two items
-        else if(Manager.GetComponent<PlayerManager>().holding && occupied && !lerp && !swap && GM.HoveredObject.collider != null)
-        {
-            //gameObject.GetComponentInParent<PlayerManager>().PickUp.Play();
-            PickUpSeq();
-            swap = true;
-            Debug.Log("Swap");
-        }
-        //otherwise null
-        else
-        {
-            Debug.Log("nothing");
-        }
-
     }
 
     void SetLerpData(Vector3 startpoint, Vector3 endpoint)
