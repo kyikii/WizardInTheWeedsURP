@@ -2829,7 +2829,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: Wild Parsnip Weed (2)
+      value: Wild Parsnip
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -7357,7 +7357,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: Wild Parsnip Weed (4)
+      value: Wild Parsnip
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -8111,7 +8111,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: Wild Parsnip Weed (3)
+      value: Wild Parsnip
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -11857,7 +11857,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: Wild Parsnip Weed (1)
+      value: Wild Parsnip
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
@@ -15031,7 +15031,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: m_Name
-      value: Wild Parsnip Weed
+      value: Wild Parsnip
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
