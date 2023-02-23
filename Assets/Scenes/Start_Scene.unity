@@ -1650,9 +1650,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TimeDisplay, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 1485554306}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: LaunchMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
