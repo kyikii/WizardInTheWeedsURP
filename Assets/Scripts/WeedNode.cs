@@ -24,8 +24,9 @@ public class WeedNode : MonoBehaviour
         Manager = gameObject.GetComponentInParent<WeedManager>();
         poof = gameObject.GetComponent<ParticleSystem>();
 
-        WeedName = GameObject.Find("WeedName");
         GM = GetComponentInParent<GameManager>();
+
+        WeedName = GameObject.Find("WeedName");
         NameText = WeedName.GetComponent<TMP_Text>();
 
         ModelA = gameObject.transform.GetChild(1).gameObject;
@@ -37,14 +38,14 @@ public class WeedNode : MonoBehaviour
 
     void OnMouseOver()
     {
-        if(GM.HoveredObject.collider != null)
+        if(GM.HoveredObject.gameObject == this.gameObject)
         {
             Highliter.highlightObj(CurrentModel);
             NameText.enabled = true;
             NameText.text = this.gameObject.name;
         }
 
-        else if(GM.HoveredObject.collider == null)
+        else if(GM.HoveredObject == GM.NillObj)
         {
             Highliter.UnhighlightObj(CurrentModel);
             NameText.enabled = false;
@@ -59,7 +60,7 @@ public class WeedNode : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(state < 4 && GM.HoveredObject.collider != null)
+        if(state < 4 && GM.HoveredObject.gameObject == this.gameObject)
         {
             UpdateState();
             //poof.Clear();
