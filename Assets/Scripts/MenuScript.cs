@@ -19,12 +19,12 @@ public class MenuScript : MonoBehaviour
 
     public void LauchDev()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void LaunchMain()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene(2);
     }
 
     public void LaunchTutorial()

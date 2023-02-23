@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start_Scene.unity
     guid: 9a9492c97d6027e4993a8c5fd6020e84
   - enabled: 1
+    path: Assets/Scenes/Revised_Tutorial.unity
+    guid: 3da7b9ea0b61c664f8c9d68d6d7785e4
+  - enabled: 1
     path: Assets/Scenes/GreyBox.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1

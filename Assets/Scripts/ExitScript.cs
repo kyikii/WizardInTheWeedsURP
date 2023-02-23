@@ -21,7 +21,7 @@ public class ExitScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             float lastTime = Time.timeSinceLevelLoad;
             PlayerPrefs.SetFloat("lastTime",lastTime);
         }
