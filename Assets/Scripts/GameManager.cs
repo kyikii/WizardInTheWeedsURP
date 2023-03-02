@@ -5,10 +5,11 @@ using Fungus;
 
 public class GameManager : MonoBehaviour
 {
-
+    private bool ActivateCodex;
     [SerializeField] GameObject NodeManager,WeedManager,Player;
-    [SerializeField] Flowchart start_FC,statue_FC,codex_FC;
-    [SerializeField] int CastDistance = 5;
+    GameObject[] charts;
+    [SerializeField] Flowchart codex_FC;
+    [SerializeField] int CastDistance = 5,NumCharts;
     public RaycastHit RayOut; 
     public GameObject HoveredObject,NillObj;
 
@@ -34,6 +35,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        charts = new GameObject[NumCharts];
+        charts = GameObject.FindGameObjectsWithTag("Flowchart");
+        
+
+        for(int i = 0; i< NumCharts;i++)
+        {
+            Debug.Log(charts[i]);
+        }
+        
+        //Debug.Log(charts[1]);
         HoveredObject = NillObj;
         StartCoroutine(Raycast());
     }
@@ -62,7 +73,16 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Tab))
         {
-            if(start_FC.HasExecutingBlocks() == false && statue_FC.HasExecutingBlocks() == false)
+            ActivateCodex = true;
+            for(int i = 0; i< NumCharts;i++)
+            {
+                if(charts[i].GetComponent<Flowchart>().HasExecutingBlocks() == true)
+                {
+                    ActivateCodex = false;
+                }
+            }
+
+            if(ActivateCodex == true)
             {
                 Debug.Log("Do the book");
                 codex_FC.SendFungusMessage("ActivateBook");

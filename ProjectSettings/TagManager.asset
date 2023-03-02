@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Holdable
   - Activatable
+  - Flowchart
   layers:
   - Default
   - TransparentFX
