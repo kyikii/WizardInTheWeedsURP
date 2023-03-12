@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     GameObject[] charts;
     [SerializeField] Flowchart codex_FC;
     [SerializeField] int CastDistance = 5,NumCharts;
-    public RaycastHit RayOut; 
+    public RaycastHit RayOut;
+
     public GameObject HoveredObject,NillObj;
 
     IEnumerator Raycast()
