@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToolBeltScript : MonoBehaviour
 {
     public GameObject CurrentTool;
+    public Animator ToolAnims;
     [SerializeField] GameObject NillObj;
     
 
@@ -12,7 +13,7 @@ public class ToolBeltScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ToolAnims = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,9 +35,9 @@ public class ToolBeltScript : MonoBehaviour
             else
             {
                 CurrentTool = gameObject.transform.GetChild(0).gameObject;
-                this.GetComponent<Animator>().SetBool("Equip Shovel",true);
-                this.GetComponent<Animator>().SetBool("Equip Rake",false);
-                this.GetComponent<Animator>().SetBool("Equip Shears",false);
+                ToolAnims.SetBool("Equip Shovel",true);
+                ToolAnims.SetBool("Equip Rake",false);
+                ToolAnims.SetBool("Equip Shears",false);
             }
         }
         else if(Input.GetKeyDown(KeyCode.Alpha2))
@@ -48,9 +49,9 @@ public class ToolBeltScript : MonoBehaviour
             else
             {
                 CurrentTool = gameObject.transform.GetChild(1).gameObject;
-                this.GetComponent<Animator>().SetBool("Equip Shovel",false);
-                this.GetComponent<Animator>().SetBool("Equip Rake",false);
-                this.GetComponent<Animator>().SetBool("Equip Shears",true);
+                ToolAnims.SetBool("Equip Shovel",false);
+                ToolAnims.SetBool("Equip Rake",false);
+                ToolAnims.SetBool("Equip Shears",true);
             }
         }
         else if(Input.GetKeyDown(KeyCode.Alpha3))
@@ -62,9 +63,9 @@ public class ToolBeltScript : MonoBehaviour
             else
             {
                 CurrentTool = gameObject.transform.GetChild(2).gameObject;
-                this.GetComponent<Animator>().SetBool("Equip Shovel",false);
-                this.GetComponent<Animator>().SetBool("Equip Rake",true);
-                this.GetComponent<Animator>().SetBool("Equip Shears",false);
+                ToolAnims.SetBool("Equip Shovel",false);
+                ToolAnims.SetBool("Equip Rake",true);
+                ToolAnims.SetBool("Equip Shears",false);
             }
             
         }
@@ -73,23 +74,19 @@ public class ToolBeltScript : MonoBehaviour
     private void resetTools()
     {
         CurrentTool = NillObj;
-        this.GetComponent<Animator>().SetBool("Equip Shovel",false);
-        this.GetComponent<Animator>().SetBool("Equip Rake",false);
-        this.GetComponent<Animator>().SetBool("Equip Shears",false);
+        ToolAnims.SetBool("Equip Shovel",false);
+        ToolAnims.SetBool("Equip Rake",false);
+        ToolAnims.SetBool("Equip Shears",false);
     }
 
     public void ActivateTool()
     {
-        this.GetComponent<Animator>().SetBool("UseTool",true);
+        ToolAnims.SetBool("UseTool",true);
     }
 
     public void DeactivateTool()
     {
-        this.GetComponent<Animator>().SetBool("UseTool",false);
+        ToolAnims.SetBool("UseTool",false);
     }
-    void OnMouseDown()
-    {
-        
-    }
-
+    
 }

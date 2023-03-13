@@ -66,7 +66,7 @@ public class WeedNode : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(state < 4 && GM.HoveredObject.gameObject == this.gameObject && Belt.CurrentTool == DesiredTool)
+        if(state < 4 && GM.HoveredObject.gameObject == this.gameObject && Belt.CurrentTool == DesiredTool && Belt.ToolAnims.GetBool("UseTool") == false)
         {
             UpdateState();
             Belt.ActivateTool();

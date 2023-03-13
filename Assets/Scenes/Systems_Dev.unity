@@ -130,7 +130,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74218
+  m_Name: pb_Mesh90438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -557,7 +557,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74840
+  m_Name: pb_Mesh90748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1006,7 +1006,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
@@ -1696,17 +1696,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: ToolB
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: ToolC
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 1163992281}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: BeltObj
@@ -2564,7 +2564,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ad7f0c1b6f854a046bab3d4a3c0abcd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad7f0c1b6f854a046bab3d4a3c0abcd5,
         type: 3}
@@ -3065,7 +3065,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74626
+  m_Name: pb_Mesh90640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3433,6 +3433,7 @@ Transform:
   - {fileID: 783967221}
   - {fileID: 1189103555}
   - {fileID: 1997786943}
+  - {fileID: 1294949121}
   m_Father: {fileID: 180751465}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4604,7 +4605,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041201, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: m_Name
-      value: English Ivy (1)
+      value: English Ivy
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
@@ -4685,17 +4686,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: ToolB
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: ToolC
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 1163992281}
     - target: {fileID: 986353236292041215, guid: 294ab48c95aa1c54fb0dcd65b40ce47e,
         type: 3}
       propertyPath: BeltObj
@@ -5204,7 +5205,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh75306
+  m_Name: pb_Mesh90926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5567,7 +5568,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74446
+  m_Name: pb_Mesh90568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6199,6 +6200,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1020189068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 488262519}
+    m_Modifications:
+    - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_Name
+      value: Angry Pasrsnip
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041201, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_TagString
+      value: Activatable
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5834
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5834
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5834
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.781
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.586
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.874
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: Belt
+      value: 
+      objectReference: {fileID: 1146532055}
+    - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: ToolA
+      value: 
+      objectReference: {fileID: 713835077}
+    - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: ToolB
+      value: 
+      objectReference: {fileID: 1436133364}
+    - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: ToolC
+      value: 
+      objectReference: {fileID: 1163992281}
+    - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
+        type: 3}
+      propertyPath: BeltObj
+      value: 
+      objectReference: {fileID: 1146532055}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76e98799f3d869b49a99730a60d4fc31, type: 3}
 --- !u!1 &1026215872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,7 +6368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74386
+  m_Name: pb_Mesh90534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8543,7 +8658,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
@@ -9108,7 +9223,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
@@ -9126,6 +9241,12 @@ PrefabInstance:
       objectReference: {fileID: 1146532055}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76e98799f3d869b49a99730a60d4fc31, type: 3}
+--- !u!4 &1294949121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 986353236292041214, guid: 76e98799f3d869b49a99730a60d4fc31,
+    type: 3}
+  m_PrefabInstance: {fileID: 1020189068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347190669
 GameObject:
   m_ObjectHideFlags: 1
@@ -9177,7 +9298,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74556
+  m_Name: pb_Mesh90608
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10664,7 +10785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh75204
+  m_Name: pb_Mesh90866
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11965,7 +12086,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
@@ -12331,7 +12452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
@@ -12436,7 +12557,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ToolA
       value: 
-      objectReference: {fileID: 1436133364}
+      objectReference: {fileID: 713835077}
     - target: {fileID: 986353236292041215, guid: 76e98799f3d869b49a99730a60d4fc31,
         type: 3}
       propertyPath: ToolB
