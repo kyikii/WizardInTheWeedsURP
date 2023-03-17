@@ -7,12 +7,14 @@ public class ToolBeltScript : MonoBehaviour
     public GameObject CurrentTool;
     public Animator ToolAnims;
     [SerializeField] GameObject NillObj;
-    
+    [SerializeField] GameManager GM;
+    [SerializeField] HotBarSwitch HotBar;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         ToolAnims = this.GetComponent<Animator>();
     }
 
@@ -21,72 +23,77 @@ public class ToolBeltScript : MonoBehaviour
     {
         updateKeys();
     }
-    
-    void updateKeys()
-    {
-        
 
-    if(Input.GetKeyDown(KeyCode.Alpha1))
+    private void updateKeys()
+    {
+        if(GM.ChartsRunning() == false)
         {
-            if(CurrentTool == gameObject.transform.GetChild(0).gameObject)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && GM.ChartsRunning() == false)
+        {
+            if (CurrentTool == gameObject.transform.GetChild(0).gameObject)
             {
                 resetTools();
             }
             else
             {
                 CurrentTool = gameObject.transform.GetChild(0).gameObject;
-                ToolAnims.SetBool("Equip Shovel",true);
-                ToolAnims.SetBool("Equip Rake",false);
-                ToolAnims.SetBool("Equip Shears",false);
+                HotBar.PlayShovelAnim();
+                ToolAnims.SetBool("Equip Shovel", true);
+                ToolAnims.SetBool("Equip Rake", false);
+                ToolAnims.SetBool("Equip Shears", false);
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && GM.ChartsRunning() == false)
         {
-            if(CurrentTool == gameObject.transform.GetChild(1).gameObject)
+            if (CurrentTool == gameObject.transform.GetChild(1).gameObject)
             {
                 resetTools();
             }
             else
             {
                 CurrentTool = gameObject.transform.GetChild(1).gameObject;
-                ToolAnims.SetBool("Equip Shovel",false);
-                ToolAnims.SetBool("Equip Rake",false);
-                ToolAnims.SetBool("Equip Shears",true);
+                HotBar.PlayShearsAnim();
+                ToolAnims.SetBool("Equip Shovel", false);
+                ToolAnims.SetBool("Equip Rake", false);
+                ToolAnims.SetBool("Equip Shears", true);
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && GM.ChartsRunning() == false)
         {
-            if(CurrentTool == gameObject.transform.GetChild(2).gameObject)
+            if (CurrentTool == gameObject.transform.GetChild(2).gameObject)
             {
                 resetTools();
             }
             else
             {
                 CurrentTool = gameObject.transform.GetChild(2).gameObject;
-                ToolAnims.SetBool("Equip Shovel",false);
-                ToolAnims.SetBool("Equip Rake",true);
-                ToolAnims.SetBool("Equip Shears",false);
+                HotBar.PlayRakeAnim();
+                ToolAnims.SetBool("Equip Shovel", false);
+                ToolAnims.SetBool("Equip Rake", true);
+                ToolAnims.SetBool("Equip Shears", false);
             }
-            
+
+        }
         }
     }
 
-    private void resetTools()
+    public void resetTools()
     {
+        HotBar.ResetHotbar();
         CurrentTool = NillObj;
-        ToolAnims.SetBool("Equip Shovel",false);
-        ToolAnims.SetBool("Equip Rake",false);
-        ToolAnims.SetBool("Equip Shears",false);
+        ToolAnims.SetBool("Equip Shovel", false);
+        ToolAnims.SetBool("Equip Rake", false);
+        ToolAnims.SetBool("Equip Shears", false);
     }
 
     public void ActivateTool()
     {
-        ToolAnims.SetBool("UseTool",true);
+        ToolAnims.SetBool("UseTool", true);
     }
 
     public void DeactivateTool()
     {
-        ToolAnims.SetBool("UseTool",false);
+        ToolAnims.SetBool("UseTool", false);
     }
-    
+
 }

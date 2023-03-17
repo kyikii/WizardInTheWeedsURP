@@ -5,13 +5,14 @@ using Fungus;
 
 public class GameManager : MonoBehaviour
 {
-    private bool ActivateCodex;
+    //private bool ActivateCodex;
     [SerializeField] GameObject NodeManager,WeedManager,Player;
-    GameObject[] charts;
+    public GameObject[] charts;
     [SerializeField] Flowchart codex_FC;
     [SerializeField] int CastDistance = 5,NumCharts;
     public RaycastHit RayOut;
 
+    Transform PlayerCam;
     public GameObject HoveredObject,NillObj;
 
     IEnumerator Raycast()
@@ -38,12 +39,13 @@ public class GameManager : MonoBehaviour
     {
         charts = new GameObject[NumCharts];
         charts = GameObject.FindGameObjectsWithTag("Flowchart");
-        
-
+    
         for(int i = 0; i< NumCharts;i++)
         {
             Debug.Log(charts[i]);
         }
+
+        PlayerCam = Player.transform.GetChild(0).transform.GetChild(0);
         
         //Debug.Log(charts[1]);
         HoveredObject = NillObj;
@@ -58,8 +60,8 @@ public class GameManager : MonoBehaviour
 
     void UpdateRaycast()
     {
-        Physics.Raycast(Player.transform.position, Player.transform.forward, out RayOut, CastDistance);
-        Debug.DrawRay(Player.transform.position, Player.transform.forward * CastDistance, Color.red ,10);
+        Physics.Raycast(PlayerCam.position, PlayerCam.forward, out RayOut, CastDistance);
+        Debug.DrawRay(PlayerCam.position, PlayerCam.forward * CastDistance, Color.red ,10);
         if(HoveredObject == NillObj)
         {
             Debug.Log("Null");
@@ -72,22 +74,24 @@ public class GameManager : MonoBehaviour
 
     void BookActivation()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(KeyCode.Tab) && ChartsRunning() == false)
         {
-            ActivateCodex = true;
-            for(int i = 0; i< NumCharts;i++)
-            {
-                if(charts[i].GetComponent<Flowchart>().HasExecutingBlocks() == true)
-                {
-                    ActivateCodex = false;
-                }
-            }
+            Debug.Log("Do the book");
+            codex_FC.SendFungusMessage("ActivateBook");
+            //Player.transform.GetChild(1).transform.GetChild(0).GetComponent<ToolBeltScript>().resetTools();
+        }
+    }
 
-            if(ActivateCodex == true)
+    public bool ChartsRunning()
+    {
+        bool ChartsRunning = false;
+        for(int i = 0; i< NumCharts;i++)
+        {
+            if(charts[i].GetComponent<Flowchart>().HasExecutingBlocks() == true)
             {
-                Debug.Log("Do the book");
-                codex_FC.SendFungusMessage("ActivateBook");
+                ChartsRunning = true;
             }
         }
+        return ChartsRunning;
     }
 }
