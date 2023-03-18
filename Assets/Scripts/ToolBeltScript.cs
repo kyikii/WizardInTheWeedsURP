@@ -9,12 +9,13 @@ public class ToolBeltScript : MonoBehaviour
     [SerializeField] GameObject NillObj;
     [SerializeField] GameManager GM;
     [SerializeField] HotBarSwitch HotBar;
+    private ParticleSystem MagicParticles;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        MagicParticles = this.GetComponent<ParticleSystem>();
         ToolAnims = this.GetComponent<Animator>();
     }
 
@@ -94,6 +95,12 @@ public class ToolBeltScript : MonoBehaviour
     public void DeactivateTool()
     {
         ToolAnims.SetBool("UseTool", false);
+    }
+
+    public void Particles()
+    {
+        MagicParticles.Clear();
+        MagicParticles.Play();
     }
 
 }
