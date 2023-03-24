@@ -6,6 +6,7 @@ public class ToolBeltScript : MonoBehaviour
 {
     public GameObject CurrentTool;
     public Animator ToolAnims;
+    public bool EquipReady;
     [SerializeField] GameObject NillObj;
     [SerializeField] GameManager GM;
     [SerializeField] HotBarSwitch HotBar;
@@ -15,6 +16,7 @@ public class ToolBeltScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EquipReady = true;
         MagicParticles = this.GetComponent<ParticleSystem>();
         ToolAnims = this.GetComponent<Animator>();
     }
@@ -27,7 +29,7 @@ public class ToolBeltScript : MonoBehaviour
 
     private void updateKeys()
     {
-        if (GM.ChartsRunning() == false)
+        if (GM.ChartsRunning() == false && EquipReady == true)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -73,7 +75,6 @@ public class ToolBeltScript : MonoBehaviour
                     ToolAnims.SetBool("Equip Rake", true);
                     ToolAnims.SetBool("Equip Shears", false);
                 }
-
             }
         }
     }
@@ -95,6 +96,15 @@ public class ToolBeltScript : MonoBehaviour
     public void DeactivateTool()
     {
         ToolAnims.SetBool("UseTool", false);
+    }
+
+    public void Switching()
+    {
+        EquipReady = false;
+    }
+    public void Idle()
+    {
+        EquipReady = true;
     }
 
     public void Particles()

@@ -93,7 +93,7 @@ public class Player_Controller : MonoBehaviour
     public void LockCam()
     {
         CamLock = true;
-        
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -101,6 +101,7 @@ public class Player_Controller : MonoBehaviour
     {
         CamLock  = false;
         currentDirVelocity = new Vector2(0,0);
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }

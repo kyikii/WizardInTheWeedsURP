@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
     //private bool ActivateCodex;
     [SerializeField] GameObject NodeManager,WeedManager,Player;
     public GameObject[] charts;
+    GameObject[] menus;
     [SerializeField] Flowchart codex_FC;
-    [SerializeField] int CastDistance = 5,NumCharts;
+    //[SerializeField] MenuDialog MD_A,MD_B;
+    [SerializeField] int CastDistance = 5,NumCharts,NumMenus;
     public RaycastHit RayOut;
 
     Transform PlayerCam;
@@ -39,10 +41,18 @@ public class GameManager : MonoBehaviour
     {
         charts = new GameObject[NumCharts];
         charts = GameObject.FindGameObjectsWithTag("Flowchart");
+
+        menus = new GameObject[NumMenus];
+        menus = GameObject.FindGameObjectsWithTag("MenuDialogue");
     
         for(int i = 0; i< NumCharts;i++)
         {
             Debug.Log(charts[i]);
+        }
+        for(int i = 0; i< NumMenus;i++)
+        {
+            Debug.Log(menus[i]);
+            menus[i].SetActive(false);
         }
 
         PlayerCam = Player.transform.GetChild(0).transform.GetChild(0);
@@ -87,7 +97,18 @@ public class GameManager : MonoBehaviour
         bool ChartsRunning = false;
         for(int i = 0; i< NumCharts;i++)
         {
-            if(charts[i].GetComponent<Flowchart>().HasExecutingBlocks() == true)
+            Flowchart TempFC = charts[i].GetComponent<Flowchart>();
+            if(TempFC.HasExecutingBlocks() == true)
+            {
+                ChartsRunning = true;
+                //codex_FC.SetBooleanVariable
+            }
+        }
+
+        for(int i = 0; i< NumMenus;i++)
+        {
+            MenuDialog TempMD = menus[i].GetComponent<MenuDialog>();
+            if(TempMD.IsActive())
             {
                 ChartsRunning = true;
             }
