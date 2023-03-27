@@ -18,6 +18,7 @@ public class WeedNode : MonoBehaviour
     private ParticleSystem poof;
     private GameManager GM;
     private ToolBeltScript Belt;
+    private WeedArea Area;
 
     void Start()
     {
@@ -25,8 +26,9 @@ public class WeedNode : MonoBehaviour
         Highliter = gameObject.GetComponent<HighlightScript>();
         Manager = gameObject.GetComponentInParent<WeedManager>();
         poof = gameObject.GetComponent<ParticleSystem>();
-        GM = GetComponentInParent<GameManager>();
+        GM = GetComponentInParent<Transform>().GetComponentInParent<GameManager>();
         Belt = BeltObj.GetComponent<ToolBeltScript>();
+        Area = gameObject.GetComponentInParent<WeedArea>();
 
         //canvas interactions
         WeedName = GameObject.Find("WeedName");
@@ -102,6 +104,7 @@ public class WeedNode : MonoBehaviour
             ModelC.SetActive(false);
             CurrentModel = null;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            Area.UpdateAreaTotal();
             Manager.updateWeedTotal();
             DesiredTool = GM.NillObj;
             break;

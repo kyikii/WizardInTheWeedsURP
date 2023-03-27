@@ -15,13 +15,13 @@ public class WeedManager : MonoBehaviour
     {
         foreach(Transform child in this.transform)
         {
-            TotalWeeds++;
+            TotalWeeds += child.transform.childCount;
             Debug.Log(TotalWeeds);
         }
         CurrentWeeds = TotalWeeds;
         IndicatorText = WeedTotalIndicator.GetComponent<TMP_Text>();
         EndText = EndingIndicator.GetComponent<TMP_Text>();
-        IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds";
+        IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Total";
     }
 
     public void updateWeedTotal()
@@ -38,7 +38,7 @@ public class WeedManager : MonoBehaviour
 
             case > 1:
             CurrentWeeds --;
-            IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Weeds";
+            IndicatorText.text = CurrentWeeds + " / " + TotalWeeds + " Total";
             break;
         }
         //CurrentWeeds --;
