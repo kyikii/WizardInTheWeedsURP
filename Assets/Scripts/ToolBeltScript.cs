@@ -39,11 +39,7 @@ public class ToolBeltScript : MonoBehaviour
                 }
                 else
                 {
-                    CurrentTool = gameObject.transform.GetChild(0).gameObject;
-                    HotBar.PlayShovelAnim();
-                    ToolAnims.SetBool("Equip Shovel", true);
-                    ToolAnims.SetBool("Equip Rake", false);
-                    ToolAnims.SetBool("Equip Shears", false);
+                    ShowShovel();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -54,11 +50,7 @@ public class ToolBeltScript : MonoBehaviour
                 }
                 else
                 {
-                    CurrentTool = gameObject.transform.GetChild(1).gameObject;
-                    HotBar.PlayShearsAnim();
-                    ToolAnims.SetBool("Equip Shovel", false);
-                    ToolAnims.SetBool("Equip Rake", false);
-                    ToolAnims.SetBool("Equip Shears", true);
+                    ShowShears();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -69,14 +61,59 @@ public class ToolBeltScript : MonoBehaviour
                 }
                 else
                 {
-                    CurrentTool = gameObject.transform.GetChild(2).gameObject;
-                    HotBar.PlayRakeAnim();
-                    ToolAnims.SetBool("Equip Shovel", false);
-                    ToolAnims.SetBool("Equip Rake", true);
-                    ToolAnims.SetBool("Equip Shears", false);
+                    ShowRake();
                 }
             }
         }
+    }
+
+    private void ShowShovel()
+    {
+        CurrentTool = gameObject.transform.GetChild(0).gameObject;
+        HotBar.PlayShovelAnim();
+        ToolAnims.SetBool("Equip Shovel", true);
+        ToolAnims.SetBool("Equip Rake", false);
+        ToolAnims.SetBool("Equip Shears", false);
+    }
+
+    public void EnableShovel()
+    {
+        ToolAnims.SetBool("ShovelEnabled", true);
+        HotBar.showShovel_ICN();
+        ShowShovel();
+    }
+
+
+
+    private void ShowShears()
+    {
+        CurrentTool = gameObject.transform.GetChild(1).gameObject;
+        HotBar.PlayShearsAnim();
+        ToolAnims.SetBool("Equip Shovel", false);
+        ToolAnims.SetBool("Equip Rake", false);
+        ToolAnims.SetBool("Equip Shears", true);
+    }
+
+    public void EnableShears()
+    {
+        ToolAnims.SetBool("ShearsEnabled", true);
+        HotBar.showShears_ICN();
+        ShowShears();
+    }
+
+    private void ShowRake()
+    {
+        CurrentTool = gameObject.transform.GetChild(2).gameObject;
+        HotBar.PlayRakeAnim();
+        ToolAnims.SetBool("Equip Shovel", false);
+        ToolAnims.SetBool("Equip Rake", true);
+        ToolAnims.SetBool("Equip Shears", false);
+    }
+    public void EnableRake()
+    {
+        ToolAnims.SetBool("RakeEnabled", true);
+        HotBar.showRake_ICN();
+        ShowRake();
     }
 
     public void resetTools()

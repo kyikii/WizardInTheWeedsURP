@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,6 +80,22 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log(HoveredObject.name);
+        }
+    }
+
+    public void updateCodex(string Name)
+    {
+        if(Name == "Wild Parsnip")
+        {
+            codex_FC.SetBooleanVariable("Parsnip",true);
+        }
+        else if(Name == "English Ivy")
+        {
+            codex_FC.SetBooleanVariable("Vines",true);   
+        }
+        else if(Name == "Bull Thistle")
+        {
+            codex_FC.SetBooleanVariable("Thistle",true);
         }
     }
 

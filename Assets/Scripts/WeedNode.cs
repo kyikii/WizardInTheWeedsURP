@@ -49,6 +49,7 @@ public class WeedNode : MonoBehaviour
         if(GM.HoveredObject.gameObject == this.gameObject)
         {
             Highliter.highlightObj(CurrentModel);
+            GM.updateCodex(this.name);
             NameText.enabled = true;
             NameText.text = this.gameObject.name;
         }
