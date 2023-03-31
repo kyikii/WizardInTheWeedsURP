@@ -7,15 +7,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] Flowchart PreferedChart;
     [SerializeField] GameObject PreferedDialogueBox;
-
     [SerializeField] Player_Controller player;
-
-    [SerializeField] GameObject HeadPoint; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {

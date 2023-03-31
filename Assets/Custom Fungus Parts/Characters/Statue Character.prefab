@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: Statue
   nameColor: {r: 1, g: 1, b: 1, a: 1}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 59f9c41d44246ac4099dd938ebb6de8d, type: 3}
   portraits: []
   portraitsFace: 0
   setSayDialog: {fileID: 657199655013525159, guid: 6a96c8aec13fdbb4b9266ddb081c2073,
