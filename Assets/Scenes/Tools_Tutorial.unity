@@ -1136,8 +1136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: 'Heya darling, this is the weed codex. unfortunately for you lovelies
-    some one else is going to write it out. '
+  storyText: 'Welcome, Weeding Wizard! Unlock the codex page of a specific weed by
+    interacting with that weed.
+
+'
   description: 
   character: {fileID: 4245376628474228361}
   portrait: {fileID: 0}
@@ -1214,7 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 127.17434, y: 175.8329}
+  scrollPos: {x: 361.55222, y: 253.89555}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 403
@@ -1226,8 +1228,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 29441440}
-  selectedCommands: []
+  - {fileID: 29441420}
+  selectedCommands:
+  - {fileID: 29441419}
   variables:
   - {fileID: 29441455}
   - {fileID: 29441454}
@@ -1354,7 +1357,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 44
   indentLevel: 0
-  storyText: Thistle Page
+  storyText: '{size = 60}{b}{i} Bull Thistle Page {/i}{/b}{/size}
+
+    
+
+    In
+    the arid dry environments of Southern Ontario is where you find the noxious weed
+    known as the Bull Thistle. The commonplace Bull Thistle or Canadian Thistle is
+    native to Europe and N. Asia. It spreads by its creeping deep roots where it
+    can out-grow the native species. It is considered to be a noxious weed throughout
+    the province as its sharp needles fully grown tend to make it difficult to remove
+    by hand.
+
+    
+
+    {b}{i}SHOVEL, SHOVEL, SHOVEL{/i}{/b}
+
+    
+
+    It is
+    a safety recommendation to dig a deep hole around a fully grown thistle using
+    a shovel to eventually lift the thistle out by the roots to put into your waste
+    disposal bag.
+
+'
   description: 
   character: {fileID: 4245376628474228361}
   portrait: {fileID: 0}
@@ -1542,7 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  text: Water Hemlock
+  text: Mil Foil
   description: 
   targetBlock: {fileID: 29441427}
   hideIfVisited: 0
@@ -1705,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  text: Creeping Vines
+  text: English Ivy
   description: 
   targetBlock: {fileID: 29441433}
   hideIfVisited: 0
@@ -1811,7 +1837,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 38
   indentLevel: 0
-  storyText: Vines Page
+  storyText: "{size = 60}{b}{i} English Ivy Page {/i}{/b}{/size}\r\n\r\nCommon Ivy,
+    English Ivy, Creeping Vine, or just Ivy is an aggressive plant that grows quickly
+    over a short timeframe. Native to Europe and Western Asia, while you may like
+    the look of the English Ivy, it is a bad idea to allow it to grow on your walls
+    as the Ivy has tiny rootlets that act as suction cups to attach themselves to
+    walls and begin to 'climb' out of reaching distance. \r\n\r\n{b}{i} SHEARS, SHEARS,
+    RAKE {/i}{/b}\r\n\r\nIf left alone, the vine will continue to grow until it completely
+    covers the structure it is growing on. If the building has weak walls, the Ivy
+    is capable of breaking into homes through broken windows or cracks in the walls."
   description: 
   character: {fileID: 4245376628474228361}
   portrait: {fileID: 0}
@@ -1999,7 +2033,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 40
   indentLevel: 0
-  storyText: Parsnip Page {x}
+  storyText: '{size = 60}{b}{i} Wild Parsnip Page {/i}{/b}{/size}
+
+    
+
+    Native
+    to Europe and Asia. The Wild Parsnip was brought over to North America by European
+    settlers, who grew the weed for its edible root. Since then, wild parsnip has
+    escaped from cultivated gardens and spread across the continent. The plant can
+    form dense stands and spread quickly in disturbed areas such as backyards, waste
+    dumps, meadows, open fields, roadsides, and railways.
+
+    
+
+    {b}{i} SHEARS,
+    SHOVEL, SHOVEL {/i}{/b}
+
+    
+
+    It produces sap-containing chemicals that
+    cause human skin to react to sunlight, resulting in intense burns, rashes, or
+    blisters.'
   description: 
   character: {fileID: 4245376628474228361}
   portrait: {fileID: 0}
@@ -22679,7 +22733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 876112797}
+  selectedFlowchart: {fileID: 29441411}
 --- !u!4 &1347190671
 Transform:
   m_ObjectHideFlags: 1
