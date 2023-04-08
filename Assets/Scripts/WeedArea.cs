@@ -7,9 +7,8 @@ public class WeedArea : MonoBehaviour
 {
     private int AreaWeedTotal,CurrentAreaCount;
 
-    [SerializeField] public GameObject areaGate;
-    private GameObject areaIndicator;
-
+    [SerializeField] public GameObject areaGate, PlantPrefab;
+    private GameObject areaIndicator;    
     private GameManager GM;
     private TMP_Text AreaIndicatorText;
 
@@ -21,7 +20,6 @@ public class WeedArea : MonoBehaviour
         areaIndicator = GameObject.Find("Weed Area Indicator");
 
         AreaIndicatorText = areaIndicator.GetComponent<TMP_Text>();
-
 
         AreaWeedTotal = this.transform.childCount;
         CurrentAreaCount = AreaWeedTotal;

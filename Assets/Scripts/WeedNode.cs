@@ -108,6 +108,11 @@ public class WeedNode : MonoBehaviour
             Area.UpdateAreaTotal();
             Manager.updateWeedTotal();
             DesiredTool = GM.NillObj;
+
+            this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
+
+            Instantiate(Area.PlantPrefab, this.transform.GetChild(4).position + new Vector3(0,0.3f,0),Quaternion.identity);
+
             break;
         }
     }
