@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject NodeManager,WeedManager,Player;
     public GameObject[] charts;
     GameObject[] menus;
-    [SerializeField] Flowchart codex_FC;
+    [SerializeField] DialogueTrigger Statue_DT;
+    [SerializeField] WeedArea StatueArea;
+    [SerializeField] Flowchart codex_FC,Statue_FC2;
     //[SerializeField] MenuDialog MD_A,MD_B;
     [SerializeField] int CastDistance = 5,NumCharts,NumMenus;
     public RaycastHit RayOut;
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         BookActivation();
+        CheckStatue();
     }
 
     void UpdateRaycast()
@@ -106,6 +109,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("Do the book");
             codex_FC.SendFungusMessage("ActivateBook");
             //Player.transform.GetChild(1).transform.GetChild(0).GetComponent<ToolBeltScript>().resetTools();
+        }
+    }
+
+    public void CheckStatue()
+    {
+        if(!StatueArea.areaGate.activeInHierarchy)
+        {
+            Statue_DT.PreferedChart = Statue_FC2;
         }
     }
 

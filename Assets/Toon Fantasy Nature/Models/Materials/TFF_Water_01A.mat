@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: TFF_Water_01A
   m_Shader: {fileID: 4800000, guid: 21b2f218fa38d334daf2f2012e6c546d, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _WAVES_ON
   m_InvalidKeywords:
   - _LIGHTS_ON
   - _MAINFOAMPOWER_ON
@@ -67,10 +68,10 @@ Material:
     - _ReflectionsScale: 22
     - _ReflectionsScrollSpeed: 0.045
     - _ShallowColorDepth: 4
-    - _WaveAmplitude: 0.5
-    - _WaveIntensity: 0.15
+    - _WaveAmplitude: 0.026
+    - _WaveIntensity: 0.037
     - _WaveSpeed: 1
-    - _Waves: 0
+    - _Waves: 1
     - __dirty: 0
     m_Colors:
     - _DeepColor: {r: 0.13585797, g: 0.34535164, b: 0.4056604, a: 1}

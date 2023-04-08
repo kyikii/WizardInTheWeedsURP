@@ -7,7 +7,7 @@ public class WeedArea : MonoBehaviour
 {
     private int AreaWeedTotal,CurrentAreaCount;
 
-    [SerializeField] GameObject areaGate;
+    [SerializeField] public GameObject areaGate;
     private GameObject areaIndicator;
 
     private GameManager GM;

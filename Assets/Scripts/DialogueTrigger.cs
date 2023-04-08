@@ -5,7 +5,7 @@ using Fungus;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] Flowchart PreferedChart;
+    [SerializeField] public Flowchart PreferedChart;
     [SerializeField] GameObject PreferedDialogueBox;
     [SerializeField] Player_Controller player;
 
