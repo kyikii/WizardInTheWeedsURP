@@ -3764,7 +3764,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.713
+      value: 2.722
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
@@ -3774,7 +3774,7 @@ PrefabInstance:
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.916
+      value: 12.454
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
@@ -15639,17 +15639,17 @@ PrefabInstance:
     - target: {fileID: 1763762053276448005, guid: ab050726e176e9e4d916ca046ade5aa8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.022
+      value: 6.31
       objectReference: {fileID: 0}
     - target: {fileID: 1763762053276448005, guid: ab050726e176e9e4d916ca046ade5aa8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.53
+      value: 3.488
       objectReference: {fileID: 0}
     - target: {fileID: 1763762053276448005, guid: ab050726e176e9e4d916ca046ade5aa8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.849
+      value: 48.03
       objectReference: {fileID: 0}
     - target: {fileID: 1763762053276448005, guid: ab050726e176e9e4d916ca046ade5aa8,
         type: 3}
@@ -15774,6 +15774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaGate: {fileID: 684815901}
+  PlantPrefab: {fileID: 3735284535069656402, guid: 2a7873351840ab34381e33007dbc8ba5,
+    type: 3}
 --- !u!1001 &1097016938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23103,7 +23105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 29441411}
+  selectedFlowchart: {fileID: 1624445996}
 --- !u!4 &1347190671
 Transform:
   m_ObjectHideFlags: 1
@@ -26142,6 +26144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaGate: {fileID: 998479976}
+  PlantPrefab: {fileID: 5797567793304876665, guid: 9821b72f330173c458018aadeae36448,
+    type: 3}
 --- !u!43 &1455746002
 Mesh:
   m_ObjectHideFlags: 0
@@ -27252,9 +27256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Greetings, welcome the the 3rd playtest for Wizard in the weeds! this
-    may be familiar if you have played before, if not walk up to the pedistal to
-    get started!
+  storyText: Greetings, Welcome to the showcase presentation for Wizard in the weeds!
+    Walk up to the plinth to get started!
   description: 
   character: {fileID: 643324344}
   portrait: {fileID: 21300000, guid: 3c419229ecb292449b7974ef71bae64b, type: 3}
@@ -31222,17 +31225,17 @@ PrefabInstance:
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7998118
+      value: 2.293
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.392
+      value: -1.415
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.279415
+      value: 11.255
       objectReference: {fileID: 0}
     - target: {fileID: 986353236292041214, guid: ff6c573c23cdc5742b7b6396865ac725,
         type: 3}
