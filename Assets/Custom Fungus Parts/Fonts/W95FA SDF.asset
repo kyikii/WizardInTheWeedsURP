@@ -2551,8 +2551,8 @@ MonoBehaviour:
     packingMode: 0
     atlasWidth: 1024
     atlasHeight: 1024
-    characterSetSelectionMode: 0
-    characterSequence: 32 - 126, 160, 8203, 8230, 9633
+    characterSetSelectionMode: 6
+    characterSequence: 20-5F,61-7E,A0
     referencedFontAssetGUID: cbb162f8ff8a43843921e8e57c3870d7
     referencedTextAssetGUID: 
     fontStyle: 0
@@ -2596,7 +2596,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: W95FA Atlas Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -2659,7 +2660,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.73125
+    - _ScaleRatioC: 0.32688868
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -2672,10 +2673,10 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 1024
     - _TextureWidth: 1024
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
+    - _UnderlayDilate: 0.397
+    - _UnderlayOffsetX: 0.84
+    - _UnderlayOffsetY: 0.308
+    - _UnderlaySoftness: 1
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
