@@ -9,24 +9,20 @@ public class TimeDisplay : MonoBehaviour
 {
     [SerializeField] GameObject timeDisplay;
     TMP_Text TimeText;
+    SessionData DataObject;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        float LastTime = PlayerPrefs.GetFloat("lastTime");
+        DataObject = GameObject.Find("SessionData").GetComponent<SessionData>();
+
         TimeText = timeDisplay.GetComponent<TMP_Text>();
 
-        TimeText.text = "Completed in "+ LastTime +" seconds";
+        TimeText.text = "Completed in "+ DataObject.LastTime +" seconds";
     }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 
-    public void Exit()
-    {
-        Application.Quit();
-    }
+    
 }

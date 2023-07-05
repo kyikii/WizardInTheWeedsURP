@@ -12,7 +12,6 @@ public class ToolsAudio : MonoBehaviour
     {
         player = this.GetComponent<AudioSource>();
     }
-
     public void PlayRake()
     {
         player.clip = Rake;
@@ -29,10 +28,5 @@ public class ToolsAudio : MonoBehaviour
     {
         player.clip = Shovel;
         player.Play();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

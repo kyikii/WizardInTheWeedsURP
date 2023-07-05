@@ -5,25 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class ExitScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    SessionData DataObject;
+
+    GameManager GM;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        DataObject = GameObject.Find("SessionData").GetComponent<SessionData>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            Invoke("LoadStart", 1.5f);
             float lastTime = Time.timeSinceLevelLoad;
-            PlayerPrefs.SetFloat("lastTime",lastTime);
+            DataObject.LastTime = Mathf.RoundToInt(lastTime);
+            GM.Fade.Play("FadeImageIn");
+
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                DataObject.Tutorial = true;
+            }
         }
-    }       
+    }
+
+
+    private void LoadStart()
+    {
+        DontDestroyOnLoad(DataObject);
+        SceneManager.LoadScene(0);
+    }
 }

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int CastDistance = 5,NumCharts,NumMenus;
     public RaycastHit RayOut;
 
+    public Animation Fade;
+
     Transform PlayerCam;
     public GameObject HoveredObject,NillObj;
 
@@ -45,6 +47,8 @@ public class GameManager : MonoBehaviour
         charts = new GameObject[NumCharts];
         charts = GameObject.FindGameObjectsWithTag("Flowchart");
 
+        Fade = GameObject.Find("FadeImage").GetComponent<Animation>();
+
         menus = new GameObject[NumMenus];
         menus = GameObject.FindGameObjectsWithTag("MenuDialogue");
     
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log(charts[1]);
         HoveredObject = NillObj;
         StartCoroutine(Raycast());
+        Fade.Play("FadeImageOut");
     }
 
     // Update is called once per frame
